@@ -1,0 +1,89 @@
+#include "consolelogger.h"
+#include "rmscheduler.h"
+
+#include <string>
+#include <iostream>
+
+#include <stdlib.h>
+
+void usage()
+{
+    std::cerr << "Usage : simEDF <task file> [<percent>] [--scheduler <scheduler>] [--steps <simulation time>]" << std::endl;
+}
+
+int main(int argc, char **argv)
+{
+    // Parameters
+    std::string scheduler = "EDF";
+    std::string filename;
+    int switch_percent_time = 0;
+    int simulation_steps = 400;
+
+    enum {
+        None,
+        TaskFile,
+        UsagePercent,
+        SimulationSteps,
+        Scheduler
+    } state = TaskFile; // The first parameter is expected to be the task file
+
+    for (int i=1; i<argc; ++i) {
+        std::string arg(argv[i]);
+
+        if (arg == "--scheduler") {
+            state = Scheduler;
+            continue;
+        } else if (arg == "--steps") {
+            state = SimulationSteps;
+            continue;
+        }
+
+        switch (state) {
+            case TaskFile:
+                filename = arg;
+                state = UsagePercent;
+                break;
+
+            case UsagePercent:
+                switch_percent_time = atoi(arg.c_str());
+                state = None;
+                break;
+
+            case Scheduler:
+                scheduler = arg;
+                state = None;
+                break;
+
+            case SimulationSteps:
+                simulation_steps = atoi(arg.c_str());
+                state = None;
+                break;
+
+            case None:
+                usage();
+                break;
+        }
+    }
+
+    // Check that the task file is present
+    if (filename.size() == 0) {
+        usage();
+        return 1;
+    }
+
+    // Instantiate the right scheduler
+    AbstractScheduler *sched = 0;
+
+    if (scheduler == "RM") {
+        sched = new RMScheduler(filename, switch_percent_time);
+    } else {
+        std::cerr << "Unknown scheduler name: " << scheduler << std::endl;
+        return 1;
+    }
+
+    // Perform the simulation
+    ConsoleLogger logger;
+
+    sched->schedule(simulation_steps, &logger);
+    delete sched;
+}

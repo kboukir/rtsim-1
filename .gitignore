@@ -1,0 +1,4 @@
+*.o
+simEDF
+*.txt
+*.kdev4
