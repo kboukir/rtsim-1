@@ -1,49 +1,37 @@
 #include "rmscheduler.h"
 
+#include <algorithm>
+
 RMScheduler::RMScheduler(const std::string &filename, unsigned int switch_percent_time)
 : AbstractScheduler(filename, switch_percent_time)
 {
-    // The next release of each task is its period + its offset
-    TaskInfo info;
-
-    for (unsigned int i=0; i<taskCount(); ++i) {
-        const Task &t = task(i);
-
-        info.executed_cycles = 0;
-        info.next_release_absolute = t.offset + t.period;
-
-        _task_infos.push_back(info);
-    }
 }
 
 int RMScheduler::schedule()
 {
-    int best_task = -1;
-    unsigned int best_task_period = 0;
-
-    for (std::size_t i=0; i<_task_infos.size(); ++i) {
-        TaskInfo &info = _task_infos[i];
-        const Task &t = task(i);
-
-        if (info.next_release_absolute == currentTime()) {
-            // An job is released by a task
-            info.executed_cycles = 0;
-            info.next_release_absolute += t.period;
+    // Find the schedulable task with the smallest period
+    auto t = std::min_element(
+        _tasks.begin(),
+        _tasks.end(),
+        [=] (const Task &a, const Task &b) {
+            if (a.consumed_cycles == a.execution_time) {
+                // A is finished, sort it after b
+                return false;
+            } else if (b.consumed_cycles == b.execution_time) {
+                // B is finished, sort it after A
+                return true;
+            } else {
+                // Both can be executed, prefer the one with the smallest period
+                return a.period < b.period;
+            }
         }
+    );
 
-        // Check if this task has a period smaller than the current best one
-        if (info.executed_cycles < t.execution_time &&
-            (best_task == -1 || t.period < best_task_period)) {
-            best_task = i;
-            best_task_period = t.period;
-        }
+    if (t->consumed_cycles == t->execution_time) {
+        // The "best" task is still not schedulable, so schedule no task
+        return -1;
+    } else {
+        // t is the N-th element of _tasks, find this N
+        return std::distance(_tasks.begin(), t);
     }
-
-    if (best_task != -1) {
-        // We execute a cycle of the task
-        _task_infos[best_task].executed_cycles++;
-    }
-
-    return best_task;
 }
-  

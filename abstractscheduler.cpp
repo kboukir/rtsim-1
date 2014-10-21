@@ -20,8 +20,16 @@ AbstractScheduler::AbstractScheduler(const std::string &filename, unsigned int s
         file >> task.deadline;
         file >> task.execution_time;
 
+        task.consumed_cycles = 0;
+        task.time_to_deadline = task.deadline;
+        task.time_to_release = task.offset;
+
         _tasks.push_back(task);
     }
+
+    // Dummy nextTick so that the tasks can start to run
+    nextTick();
+    --_current_time;
 }
 
 AbstractScheduler::~AbstractScheduler()
@@ -48,9 +56,30 @@ const AbstractScheduler::Task &AbstractScheduler::task(int index) const
     return _tasks[index];
 }
 
+void AbstractScheduler::nextTick()
+{
+    _current_time++;
+
+    for (std::size_t i=0; i<_tasks.size(); ++i) {
+        Task &t = _tasks[i];
+
+        if (t.time_to_deadline > 0) {
+            // Don't let time_do_deadline go below zero
+            t.time_to_deadline--;
+        }
+
+        if (--t.time_to_release <= 0) {
+            // New release
+            t.consumed_cycles = 0;
+            t.time_to_release = t.period;
+            t.time_to_deadline = t.deadline;
+        }
+    }
+}
+
 bool AbstractScheduler::schedule(unsigned int time_duration, AbstractLogger *logger)
 {
-    for (_current_time = 0; _current_time < time_duration; ++_current_time) {
+    for (_current_time = 0; _current_time < time_duration; nextTick()) {
         // Ask the subclass which task must be scheduled now
         int new_task = schedule();
         unsigned int switching_time = 0;
@@ -67,11 +96,16 @@ bool AbstractScheduler::schedule(unsigned int time_duration, AbstractLogger *log
             logger->notifySwitch(this, switching_time, new_task);
 
             // Advance the current time
-            _current_time += switching_time;
+            for (unsigned int i=0; i<switching_time; ++i) {
+                nextTick();
+            }
         }
 
         // Switch the current task
         _last_task_scheduled = new_task;
+
+        // Tell the new task that it has consumed a cycle
+        _tasks[new_task].consumed_cycles++;
 
         // Notify the logger of the new task being executed
         logger->notifyTask(this, new_task);

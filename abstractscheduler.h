@@ -14,10 +14,14 @@ class AbstractScheduler
          */
         struct Task
         {
-            unsigned int offset;
-            unsigned int execution_time;
-            unsigned int deadline;
-            unsigned int period;
+            unsigned int offset;            /*!< @brief Time at which the first job of this task is released */
+            unsigned int execution_time;    /*!< @brief Worst case execution time */
+            unsigned int deadline;          /*!< @brief Deadline (relative, un number of ticks after the release time) */
+            unsigned int period;            /*!< @brief Period at which a new job is to be released */
+
+            int consumed_cycles;            /*!< @brief Number of cycles the last job of this task has already been run */
+            int time_to_deadline;           /*!< @brief Cycles remaining before the next deadline */
+            int time_to_release;            /*!< @brief Cycles remaining before the next release */
         };
 
     public:
@@ -35,8 +39,12 @@ class AbstractScheduler
     protected:
         virtual int schedule() = 0;            /*!< @brief Return which task must be executed for the current time step, or -1 if not task is schedulable */
 
-    private:
         std::vector<Task> _tasks;
+
+    private:
+        void nextTick();                       /*!< @brief Advance _current_time by one tick and update the tasks' remaining times */
+
+    private:
         unsigned int _current_time;
         unsigned int _switch_percent_time;
         int _last_task_scheduled;

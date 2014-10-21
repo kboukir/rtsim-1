@@ -1,6 +1,6 @@
 CC=gcc
 CXX=g++
-CFLAGS=-g -Wall
+CFLAGS=-g -Wall -std=c++0x
 CXXFLAGS=$(CFLAGS)
 
 # Objects for all the executables

@@ -10,14 +10,6 @@ class RMScheduler : public AbstractScheduler
 
     protected:
         virtual int schedule();
-
-    private:
-        struct TaskInfo {
-            unsigned int next_release_absolute;
-            unsigned int executed_cycles;
-        };
-
-        std::vector<TaskInfo> _task_infos;
 };
 
 #endif
