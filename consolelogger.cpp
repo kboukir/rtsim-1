@@ -60,10 +60,10 @@ void ConsoleLogger::printTaskPrefix(AbstractScheduler *scheduler, unsigned int t
     const AbstractScheduler::Task &t = scheduler->task(task);
     unsigned int time_after_release_time = (time - t.offset) % t.period;
 
-    if (time_after_release_time == 0) {
+    if (time >= t.offset && time_after_release_time == 0) {
         // This task has been released
         std::cout << "\033[44m \033[0m";
-    } else if (time_after_release_time == t.deadline - 1) {
+    } else if (time >= t.offset && time_after_release_time == t.deadline - 1) {
         // Deadline of this task
         std::cout << "\033[41m \033[0m";
     } else {

@@ -56,6 +56,12 @@ const AbstractScheduler::Task &AbstractScheduler::task(int index) const
     return _tasks[index];
 }
 
+bool AbstractScheduler::isTaskSchedulable(const Task &t) const
+{
+    return _current_time >= t.offset &&
+           t.consumed_cycles < (int)t.execution_time;
+}
+
 void AbstractScheduler::nextTick()
 {
     _current_time++;

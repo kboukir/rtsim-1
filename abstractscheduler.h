@@ -31,8 +31,9 @@ class AbstractScheduler
         bool schedule(unsigned int time_duration, AbstractLogger *logger);  /*!< @brief Runs N iterations of the scheduling algorithm */
 
         unsigned int taskCount() const;                 /*!< @brief Number of tasks in the system */
-        int currentTask() const;               /*!< @brief Index of the last task that was scheduled */
-        const Task &task(int index) const;     /*!< @brief Return information about the i-th task */
+        int currentTask() const;                        /*!< @brief Index of the last task that was scheduled */
+        const Task &task(int index) const;              /*!< @brief Return information about the i-th task */
+        bool isTaskSchedulable(const Task &t) const;    /*!< @brief Returns true if a task has a released job that is not yet finished */
 
         unsigned int currentTime() const;               /*!< @brief Current time tick (increments from 0 up to infinity as time passes) */
 

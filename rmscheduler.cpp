@@ -14,10 +14,10 @@ int RMScheduler::schedule()
         _tasks.begin(),
         _tasks.end(),
         [=] (const Task &a, const Task &b) {
-            if (a.consumed_cycles == a.execution_time) {
+            if (!isTaskSchedulable(a)) {
                 // A is finished, sort it after b
                 return false;
-            } else if (b.consumed_cycles == b.execution_time) {
+            } else if (!isTaskSchedulable(b)) {
                 // B is finished, sort it after A
                 return true;
             } else {
@@ -27,7 +27,7 @@ int RMScheduler::schedule()
         }
     );
 
-    if (t->consumed_cycles == t->execution_time) {
+    if (!isTaskSchedulable(*t)) {
         // The "best" task is still not schedulable, so schedule no task
         return -1;
     } else {
