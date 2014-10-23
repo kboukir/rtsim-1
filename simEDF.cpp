@@ -1,5 +1,6 @@
 #include "consolelogger.h"
 #include "rmscheduler.h"
+#include "dmscheduler.h"
 
 #include <string>
 #include <iostream>
@@ -76,6 +77,8 @@ int main(int argc, char **argv)
 
     if (scheduler == "RM") {
         sched = new RMScheduler(filename, switch_percent_time);
+    } else if (scheduler == "DM") {
+        sched = new DMScheduler(filename, switch_percent_time);
     } else {
         std::cerr << "Unknown scheduler name: " << scheduler << std::endl;
         return 1;
