@@ -85,11 +85,13 @@ bool AbstractScheduler::nextTick(AbstractLogger *logger)
             ok = false;
         }
 
-        if (--t.time_to_release <= 0) {
+        if (t.time_to_release > 0) {
+            t.time_to_release--;
+        } else {
             // New release
             t.consumed_cycles = 0;
-            t.time_to_release = t.period;
-            t.time_to_deadline = t.deadline;
+            t.time_to_release = t.period - 1;
+            t.time_to_deadline = t.deadline - 1;
         }
     }
 
