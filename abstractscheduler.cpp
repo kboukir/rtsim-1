@@ -2,6 +2,7 @@
 #include "abstractlogger.h"
 
 #include <fstream>
+#include <algorithm>
 #include <iostream>
 
 AbstractScheduler::AbstractScheduler(const std::string &filename, unsigned int switch_percent_time)
@@ -118,4 +119,33 @@ bool AbstractScheduler::schedule(unsigned int time_duration, AbstractLogger *log
     }
 
     return true;
+}
+
+int AbstractScheduler::schedule()
+{
+    // Find the schedulable task with the greatest priority
+    auto t = std::min_element(
+        _tasks.begin(),
+        _tasks.end(),
+        [=] (const Task &a, const Task &b) {
+            if (!isTaskSchedulable(a)) {
+                // A is finished, sort it after b
+                return false;
+            } else if (!isTaskSchedulable(b)) {
+                // B is finished, sort it after A
+                return true;
+            } else {
+                // Both can be executed, prefer the one with the greatest priority
+                return hasTaskPriority(a, b);
+            }
+        }
+    );
+
+    if (!isTaskSchedulable(*t)) {
+        // The "best" task is still not schedulable, so schedule no task
+        return -1;
+    } else {
+        // t is the N-th element of _tasks, find this N
+        return std::distance(_tasks.begin(), t);
+    }
 }

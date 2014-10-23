@@ -38,7 +38,9 @@ class AbstractScheduler
         unsigned int currentTime() const;               /*!< @brief Current time tick (increments from 0 up to infinity as time passes) */
 
     protected:
-        virtual int schedule() = 0;            /*!< @brief Return which task must be executed for the current time step, or -1 if not task is schedulable */
+        virtual int schedule();                         /*!< @brief Return which task must be executed for the current time step, or -1 if not task is schedulable */
+        virtual bool hasTaskPriority(const Task &a,
+                                     const Task &b) = 0;/*!< @brief Return true if task a should have a greater priority than task b */
 
         std::vector<Task> _tasks;
 

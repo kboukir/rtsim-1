@@ -9,7 +9,7 @@ class RMScheduler : public AbstractScheduler
         RMScheduler(const std::string &filename, unsigned int switch_percent_time);
 
     protected:
-        virtual int schedule();
+        virtual bool hasTaskPriority(const Task& a, const Task& b);
 };
 
 #endif
