@@ -105,7 +105,7 @@ bool AbstractScheduler::schedule(unsigned int time_duration, AbstractLogger *log
         int new_task = schedule();
         unsigned int switching_time = 0;
 
-        if (new_task != _last_task_scheduled && _switch_percent_time != 0) {
+        if (new_task != _last_task_scheduled && _switch_percent_time != 0 && _last_task_scheduled != -1 && new_task != -1) {
             // Task switch, so some time is lost in the context switch
             switching_time = (
                 task(_last_task_scheduled).execution_time + task(new_task).execution_time
@@ -113,7 +113,7 @@ bool AbstractScheduler::schedule(unsigned int time_duration, AbstractLogger *log
         }
 
         // Notify the logger of the possible switching time
-        if (switching_time > 0 && _last_task_scheduled != -1 && new_task != -1) {
+        if (switching_time > 0) {
             logger->notifySwitch(this, switching_time, new_task);
 
             // Advance the current time
@@ -126,7 +126,9 @@ bool AbstractScheduler::schedule(unsigned int time_duration, AbstractLogger *log
         _last_task_scheduled = new_task;
 
         // Tell the new task that it has consumed a cycle
-        _tasks[new_task].consumed_cycles++;
+        if (new_task != -1) {
+            _tasks[new_task].consumed_cycles++;
+        }
 
         // Notify the logger of the new task being executed
         logger->notifyTask(this, new_task);

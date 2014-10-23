@@ -1,4 +1,5 @@
 #include "consolelogger.h"
+#include "svglogger.h"
 #include "rmscheduler.h"
 #include "dmscheduler.h"
 
@@ -9,7 +10,7 @@
 
 void usage()
 {
-    std::cerr << "Usage : simEDF <task file> [<percent>] [--scheduler <scheduler>] [--steps <simulation time>]" << std::endl;
+    std::cerr << "Usage : simEDF <task file> [<percent>] [--scheduler <scheduler>] [--steps <simulation time>] [--svg <filename>]" << std::endl;
 }
 
 int main(int argc, char **argv)
@@ -17,6 +18,7 @@ int main(int argc, char **argv)
     // Parameters
     std::string scheduler = "EDF";
     std::string filename;
+    std::string svg_filename;
     int switch_percent_time = 0;
     int simulation_steps = 400;
 
@@ -25,7 +27,8 @@ int main(int argc, char **argv)
         TaskFile,
         UsagePercent,
         SimulationSteps,
-        Scheduler
+        Scheduler,
+        SvgFileName
     } state = TaskFile; // The first parameter is expected to be the task file
 
     for (int i=1; i<argc; ++i) {
@@ -36,6 +39,9 @@ int main(int argc, char **argv)
             continue;
         } else if (arg == "--steps") {
             state = SimulationSteps;
+            continue;
+        } else if (arg == "--svg") {
+            state = SvgFileName;
             continue;
         }
 
@@ -57,6 +63,11 @@ int main(int argc, char **argv)
 
             case SimulationSteps:
                 simulation_steps = atoi(arg.c_str());
+                state = None;
+                break;
+
+            case SvgFileName:
+                svg_filename = arg;
                 state = None;
                 break;
 
@@ -84,14 +95,21 @@ int main(int argc, char **argv)
         return 1;
     }
 
-    // Perform the simulation
-    ConsoleLogger logger;
+    // Instantiate the right logger
+    AbstractLogger *logger = 0;
 
-    if (sched->schedule(simulation_steps, &logger)) {
+    if (svg_filename.empty()) {
+        logger = new ConsoleLogger;
+    } else {
+        logger = new SvgLogger(svg_filename);
+    }
+
+    if (sched->schedule(simulation_steps, logger)) {
         std::cout << "System schedulable" << std::endl;
     } else {
         std::cout << "System NOT schedulable" << std::endl;
     }
 
+    delete logger;
     delete sched;
 }
