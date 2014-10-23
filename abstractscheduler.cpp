@@ -29,7 +29,7 @@ AbstractScheduler::AbstractScheduler(const std::string &filename, unsigned int s
     }
 
     // Dummy nextTick so that the tasks can start to run
-    nextTick();
+    nextTick(nullptr);
     --_current_time;
 }
 
@@ -63,8 +63,10 @@ bool AbstractScheduler::isTaskSchedulable(const Task &t) const
            t.consumed_cycles < (int)t.execution_time;
 }
 
-void AbstractScheduler::nextTick()
+bool AbstractScheduler::nextTick(AbstractLogger *logger)
 {
+    bool ok = true;
+
     _current_time++;
 
     for (std::size_t i=0; i<_tasks.size(); ++i) {
@@ -73,6 +75,14 @@ void AbstractScheduler::nextTick()
         if (t.time_to_deadline > 0) {
             // Don't let time_do_deadline go below zero
             t.time_to_deadline--;
+        } else if (t.consumed_cycles != (int)t.execution_time) {
+            // Oh oh, a deadline has been missed
+            if (logger) {
+                logger->notifyDeadlineMiss(this, i);
+            }
+
+            t.consumed_cycles = t.execution_time;   // This is a bit cheating but this avoids notifyDeadlineMiss to be called once for each tick between a deadline and the next release time
+            ok = false;
         }
 
         if (--t.time_to_release <= 0) {
@@ -82,11 +92,15 @@ void AbstractScheduler::nextTick()
             t.time_to_deadline = t.deadline;
         }
     }
+
+    return ok;
 }
 
 bool AbstractScheduler::schedule(unsigned int time_duration, AbstractLogger *logger)
 {
-    for (_current_time = 0; _current_time < time_duration; nextTick()) {
+    bool ok = true;
+
+    for (_current_time = 0; _current_time < time_duration; ok &= nextTick(logger)) {
         // Ask the subclass which task must be scheduled now
         int new_task = schedule();
         unsigned int switching_time = 0;
@@ -104,7 +118,7 @@ bool AbstractScheduler::schedule(unsigned int time_duration, AbstractLogger *log
 
             // Advance the current time
             for (unsigned int i=0; i<switching_time; ++i) {
-                nextTick();
+                ok &= nextTick(logger);
             }
         }
 
@@ -118,7 +132,7 @@ bool AbstractScheduler::schedule(unsigned int time_duration, AbstractLogger *log
         logger->notifyTask(this, new_task);
     }
 
-    return true;
+    return ok;
 }
 
 int AbstractScheduler::schedule()

@@ -8,6 +8,7 @@ class ConsoleLogger : public AbstractLogger
     public:
         virtual void notifyTask(AbstractScheduler *scheduler, int task);
         virtual void notifySwitch(AbstractScheduler *scheduler, unsigned int duration, unsigned int task);
+        virtual void notifyDeadlineMiss(AbstractScheduler *scheduler, int task);
 
     private:
         void printTime(unsigned int time);

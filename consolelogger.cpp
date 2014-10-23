@@ -46,6 +46,13 @@ void ConsoleLogger::notifySwitch(AbstractScheduler* scheduler, unsigned int dura
     }
 }
 
+void ConsoleLogger::notifyDeadlineMiss(AbstractScheduler *scheduler, int task)
+{
+    printTime(scheduler->currentTime());
+
+    std::cout << "\033[1m\033[31mDeadline missed\033[0m for task " << (task + 1) << std::endl;
+}
+
 void ConsoleLogger::printTime(unsigned int time)
 {
     std::cout << "[";

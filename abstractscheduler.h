@@ -45,7 +45,7 @@ class AbstractScheduler
         std::vector<Task> _tasks;
 
     private:
-        void nextTick();                       /*!< @brief Advance _current_time by one tick and update the tasks' remaining times */
+        bool nextTick(AbstractLogger *logger);          /*!< @brief Advance _current_time by one tick and update the tasks' remaining times. Return false if a deadline is missed */
 
     private:
         unsigned int _current_time;

@@ -29,6 +29,11 @@ class AbstractLogger
          * @brief Notify that there has been a switching time (time lost)
          */
         virtual void notifySwitch(AbstractScheduler *scheduler, unsigned int duration, unsigned int task) = 0;
+
+        /**
+         * @brief Notify that a deadline for task @p task has been missed
+         */
+        virtual void notifyDeadlineMiss(AbstractScheduler *scheduler, int task) = 0;
 };
 
 #endif

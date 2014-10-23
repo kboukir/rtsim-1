@@ -87,6 +87,11 @@ int main(int argc, char **argv)
     // Perform the simulation
     ConsoleLogger logger;
 
-    sched->schedule(simulation_steps, &logger);
+    if (sched->schedule(simulation_steps, &logger)) {
+        std::cout << "System schedulable" << std::endl;
+    } else {
+        std::cout << "System NOT schedulable" << std::endl;
+    }
+
     delete sched;
 }
