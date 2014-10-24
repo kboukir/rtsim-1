@@ -34,21 +34,21 @@ SvgLogger::~SvgLogger()
     // SVG defs. Here we define the gradients and effects applied to the rectangles
     svg << "\
  <defs>\n\
-  <linearGradient id=\"grad1\" x1=\"0\" y1=\"0\" x2=\"0\" y2=\"20\">\n\
+  <linearGradient id=\"grad1\" x1=\"0\" y1=\"0\" x2=\"0\" y2=\"1\">\n\
    <stop style=\"stop-color:#E8B7D7;stop-opacity:1;\" offset=\"0\" />\n\
-   <stop style=\"stop-color:#F491DF;stop-opacity:1;\" offset=\"0\" />\n\
+   <stop style=\"stop-color:#F491DF;stop-opacity:1;\" offset=\"1\" />\n\
   </linearGradient>\n\
-  <linearGradient id=\"grad2\" x1=\"0\" y1=\"0\" x2=\"0\" y2=\"20\">\n\
+  <linearGradient id=\"grad2\" x1=\"0\" y1=\"0\" x2=\"0\" y2=\"1\">\n\
    <stop style=\"stop-color:#A4C0E4;stop-opacity:1;\" offset=\"0\" />\n\
-   <stop style=\"stop-color:#6193CF;stop-opacity:1;\" offset=\"0\" />\n\
+   <stop style=\"stop-color:#6193CF;stop-opacity:1;\" offset=\"1\" />\n\
   </linearGradient>\n\
-  <linearGradient id=\"grad3\" x1=\"0\" y1=\"0\" x2=\"0\" y2=\"20\">\n\
+  <linearGradient id=\"grad3\" x1=\"0\" y1=\"0\" x2=\"0\" y2=\"1\">\n\
    <stop style=\"stop-color:#FFF6C8;stop-opacity:1;\" offset=\"0\" />\n\
-   <stop style=\"stop-color:#FFF299;stop-opacity:1;\" offset=\"0\" />\n\
+   <stop style=\"stop-color:#FFF299;stop-opacity:1;\" offset=\"1\" />\n\
   </linearGradient>\n\
-  <linearGradient id=\"grad4\" x1=\"0\" y1=\"0\" x2=\"0\" y2=\"20\">\n\
+  <linearGradient id=\"grad4\" x1=\"0\" y1=\"0\" x2=\"0\" y2=\"1\">\n\
    <stop style=\"stop-color:#BFFFBF;stop-opacity:1;\" offset=\"0\" />\n\
-   <stop style=\"stop-color:#80FF80;stop-opacity:1;\" offset=\"0\" />\n\
+   <stop style=\"stop-color:#80FF80;stop-opacity:1;\" offset=\"1\" />\n\
   </linearGradient>\n\
   <filter id=\"blur\">\n\
    <feGaussianBlur stdDeviation=\"2.85\" />\n\
@@ -100,7 +100,9 @@ SvgLogger::~SvgLogger()
                     svg,
                     i,
                     rectangle,
-                    "color:#000000;fill:#000000;opacity:0.3;filter:url(#blur);transform:translate(2,2)"
+                    "color:#000000;fill:#000000;opacity:0.3;filter:url(#blur);",
+                    2,
+                    2
                 );
 
                 // Actual rectangle
@@ -126,7 +128,8 @@ SvgLogger::~SvgLogger()
                     svg,
                     i,
                     rectangle,
-                    "stroke-width:3;stroke:#ff0000;"
+                    "stroke-width:2;stroke:#ff0000;",
+                    -1
                 );
                 break;
             }
@@ -168,11 +171,13 @@ unsigned int SvgLogger::timeToX(unsigned int time)
 void SvgLogger::drawRectangle(std::ofstream &svg,
                               unsigned int task,
                               const Rect &r,
-                              const std::string &style)
+                              const std::string &style,
+                              int dx,
+                              int dy)
 {
     svg << "  <rect "
-        << "x=\"" << (timeToX(r.start_time) + 30) << "\" "
-        << "y=\"" << (task * 20) << "\" "
+        << "x=\"" << ((int)timeToX(r.start_time) + 30 + dx) << "\" "
+        << "y=\"" << ((int)task * 20 + dy) << "\" "
         << "width=\"" << timeToX(r.len) << "\" "
         << "height=\"20\" "
         << "style=\"" + style + "\" />\n";

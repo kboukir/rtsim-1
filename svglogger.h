@@ -48,7 +48,9 @@ class SvgLogger : public AbstractLogger
         void drawRectangle(std::ofstream &svg,
                            unsigned int task,
                            const Rect &r,
-                           const std::string &style);
+                           const std::string &style,
+                           int dx = 0,
+                           int dy = 0);
 
     private:
         std::list<Rect> *_rectangles;   /*!< @brief List of rectangles for each task */
