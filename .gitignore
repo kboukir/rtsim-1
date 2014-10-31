@@ -1,4 +1,5 @@
 *.o
 simEDF
+taskGenerator
 *.txt
 *.kdev4

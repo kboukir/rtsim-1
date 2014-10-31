@@ -8,7 +8,7 @@
 
 #include <stdlib.h>
 
-void usage()
+static void usage()
 {
     std::cerr << "Usage : simEDF <task file> [<percent>] [--scheduler <scheduler>] [--steps <simulation time>] [--svg <filename>]" << std::endl;
 }
@@ -112,4 +112,6 @@ int main(int argc, char **argv)
 
     delete logger;
     delete sched;
+
+    return 0;
 }
