@@ -2,6 +2,7 @@
 #include "svglogger.h"
 #include "rmscheduler.h"
 #include "dmscheduler.h"
+#include "edfscheduler.h"
 
 #include <string>
 #include <iostream>
@@ -90,6 +91,8 @@ int main(int argc, char **argv)
         sched = new RMScheduler(filename, switch_percent_time);
     } else if (scheduler == "DM") {
         sched = new DMScheduler(filename, switch_percent_time);
+    } else if (scheduler == "EDF") {
+        sched = new EDFScheduler(filename, switch_percent_time);
     } else {
         std::cerr << "Unknown scheduler name: " << scheduler << std::endl;
         return 1;
