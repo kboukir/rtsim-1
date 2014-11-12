@@ -14,6 +14,11 @@ static void usage()
     std::cerr << "Usage : simEDF <task file> [<percent>] [--scheduler <scheduler>] [--steps <simulation time>] [--svg <filename>]" << std::endl;
 }
 
+static void printTime(const char *title, unsigned int time, unsigned int total)
+{
+    std::cout << title << time << " (" << (time * 100 / total) << " %)" << std::endl;
+}
+
 int main(int argc, char **argv)
 {
     // Parameters
@@ -21,7 +26,7 @@ int main(int argc, char **argv)
     std::string filename;
     std::string svg_filename;
     int switch_percent_time = 0;
-    int simulation_steps = 400;
+    int simulation_steps = -1;
 
     enum {
         None,
@@ -107,11 +112,21 @@ int main(int argc, char **argv)
         logger = new SvgLogger(svg_filename);
     }
 
-    if (sched->schedule(simulation_steps, logger)) {
-        std::cout << "System schedulable" << std::endl;
-    } else {
-        std::cout << "System NOT schedulable" << std::endl;
+    // Simulate the system
+    if (simulation_steps == -1) {
+        simulation_steps = sched->idealSimulationTime();
     }
+
+    sched->schedule(simulation_steps, logger);
+
+    // Print statistics
+    std::cout << std::endl;
+    std::cout << "System schedulable: " << (sched->isSystemSchedulable() ? "yes" : "no") << std::endl;
+    std::cout << "Simulation time: " << sched->currentTime() << " time steps" << std::endl;
+    printTime("Active time: ", sched->activeTime(), sched->currentTime());
+    printTime("Switching time: ", sched->switchingTime(), sched->currentTime());
+    printTime("Idle time: ", sched->currentTime() - sched->activeTime() - sched->switchingTime(), sched->currentTime());
+    std::cout << "Context switches: " << sched->numberPreemptions() << std::endl;
 
     delete logger;
     delete sched;

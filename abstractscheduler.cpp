@@ -5,6 +5,25 @@
 #include <algorithm>
 #include <iostream>
 
+template<typename T>
+static T gcd(T a, T b)
+{
+    for (;;) {
+        if (a == 0) return b;
+        b %= a;
+        if (b == 0) return a;
+        a %= b;
+    }
+}
+
+template<typename T>
+T lcm(T a, T b)
+{
+    T temp = gcd(a, b);
+
+    return temp ? (a / temp * b) : 0;
+}
+
 AbstractScheduler::AbstractScheduler(const std::string &filename, unsigned int switch_percent_time)
 : _current_time(0),
   _switch_percent_time(switch_percent_time),
@@ -47,6 +66,26 @@ unsigned int AbstractScheduler::currentTime() const
     return _current_time;
 }
 
+bool AbstractScheduler::isSystemSchedulable() const
+{
+    return _system_schedulable;
+}
+
+unsigned int AbstractScheduler::activeTime() const
+{
+    return _active_time;
+}
+
+unsigned int AbstractScheduler::switchingTime() const
+{
+    return _switching_time;
+}
+
+unsigned int AbstractScheduler::numberPreemptions() const
+{
+    return _number_preemptions;
+}
+
 unsigned int AbstractScheduler::taskCount() const
 {
     return _tasks.size();
@@ -55,6 +94,21 @@ unsigned int AbstractScheduler::taskCount() const
 const AbstractScheduler::Task &AbstractScheduler::task(int index) const
 {
     return _tasks[index];
+}
+
+unsigned int AbstractScheduler::idealSimulationTime() const
+{
+    unsigned int period = 1;
+    unsigned int max_offset = 0;
+
+    for (std::size_t i=0; i<_tasks.size(); ++i) {
+        const Task &t = _tasks[i];
+
+        max_offset = std::max(max_offset, t.offset);
+        period = lcm(period, t.period);
+    }
+
+    return max_offset + (2 * period);
 }
 
 bool AbstractScheduler::isTaskSchedulable(const Task &t) const
@@ -98,11 +152,14 @@ bool AbstractScheduler::nextTick(AbstractLogger *logger)
     return ok;
 }
 
-bool AbstractScheduler::schedule(unsigned int time_duration, AbstractLogger *logger)
+void AbstractScheduler::schedule(unsigned int time_duration, AbstractLogger *logger)
 {
-    bool ok = true;
+    _system_schedulable = true;
+    _active_time = 0;
+    _switching_time = 0;
+    _number_preemptions = 0;
 
-    for (_current_time = 0; _current_time < time_duration; ok &= nextTick(logger)) {
+    for (_current_time = 0; _current_time < time_duration; _system_schedulable &= nextTick(logger)) {
         // Ask the subclass which task must be scheduled now
         int new_task = schedule();
         unsigned int switching_time = 0;
@@ -112,6 +169,8 @@ bool AbstractScheduler::schedule(unsigned int time_duration, AbstractLogger *log
             switching_time = (
                 task(_last_task_scheduled).execution_time + task(new_task).execution_time
             ) * _switch_percent_time / 100;
+
+            _number_preemptions++;
         }
 
         // Notify the logger of the possible switching time
@@ -120,7 +179,8 @@ bool AbstractScheduler::schedule(unsigned int time_duration, AbstractLogger *log
 
             // Advance the current time
             for (unsigned int i=0; i<switching_time; ++i) {
-                ok &= nextTick(logger);
+                _system_schedulable &= nextTick(logger);
+                _switching_time++;
             }
         }
 
@@ -130,13 +190,12 @@ bool AbstractScheduler::schedule(unsigned int time_duration, AbstractLogger *log
         // Tell the new task that it has consumed a cycle
         if (new_task != -1) {
             _tasks[new_task].consumed_cycles++;
+            _active_time++;
         }
 
         // Notify the logger of the new task being executed
         logger->notifyTask(this, new_task);
     }
-
-    return ok;
 }
 
 int AbstractScheduler::schedule()

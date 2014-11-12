@@ -28,14 +28,19 @@ class AbstractScheduler
         AbstractScheduler(const std::string &filename, unsigned int switch_percent_time);
         virtual ~AbstractScheduler();
 
-        bool schedule(unsigned int time_duration, AbstractLogger *logger);  /*!< @brief Runs N iterations of the scheduling algorithm */
+        void schedule(unsigned int time_duration, AbstractLogger *logger);  /*!< @brief Runs N iterations of the scheduling algorithm */
 
         unsigned int taskCount() const;                 /*!< @brief Number of tasks in the system */
         int currentTask() const;                        /*!< @brief Index of the last task that was scheduled */
         const Task &task(int index) const;              /*!< @brief Return information about the i-th task */
         bool isTaskSchedulable(const Task &t) const;    /*!< @brief Returns true if a task has a released job that is not yet finished */
 
+        unsigned int idealSimulationTime() const;       /*!< @brief Period during which the system should be simuled in order to decide whether it is schedulable or not */
         unsigned int currentTime() const;               /*!< @brief Current time tick (increments from 0 up to infinity as time passes) */
+        bool isSystemSchedulable() const;
+        unsigned int activeTime() const;
+        unsigned int switchingTime() const;
+        unsigned int numberPreemptions() const;
 
     protected:
         virtual int schedule();                         /*!< @brief Return which task must be executed for the current time step, or -1 if not task is schedulable */
@@ -51,6 +56,12 @@ class AbstractScheduler
         unsigned int _current_time;
         unsigned int _switch_percent_time;
         int _last_task_scheduled;
+
+        // Statistics
+        bool _system_schedulable;
+        unsigned int _active_time;
+        unsigned int _switching_time;
+        unsigned int _number_preemptions;
 };
 
 #endif
