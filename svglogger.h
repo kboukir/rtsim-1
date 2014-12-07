@@ -56,6 +56,7 @@ class SvgLogger : public AbstractLogger
         std::list<Rect> *_rectangles;   /*!< @brief List of rectangles for each task */
         AbstractScheduler *_scheduler;
         std::string _filename;
+        unsigned int _max_time;
 };
 
 #endif

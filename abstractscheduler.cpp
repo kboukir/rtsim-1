@@ -10,9 +10,9 @@ static T gcd(T a, T b)
 {
     for (;;) {
         if (a == 0) return b;
-        b %= a;
+            b %= a;
         if (b == 0) return a;
-        a %= b;
+            a %= b;
     }
 }
 
@@ -34,17 +34,24 @@ AbstractScheduler::AbstractScheduler(const std::string &filename, unsigned int s
     Task task;
     std::ifstream file(filename.c_str());
 
+    task.index = 0;
+
     while (!file.eof()) {
+        task.deadline = 0;
+
         file >> task.offset;
         file >> task.period;
         file >> task.deadline;
         file >> task.execution_time;
 
         task.consumed_cycles = 0;
-        task.time_to_deadline = task.deadline;
+        task.time_to_deadline = task.deadline + task.offset;
         task.time_to_release = task.offset;
 
-        _tasks.push_back(task);
+        if (task.deadline != 0) {
+            _tasks.push_back(task);
+            task.index++;
+        }
     }
 
     // Dummy nextTick so that the tasks can start to run

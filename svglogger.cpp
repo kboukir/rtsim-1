@@ -6,7 +6,8 @@
 SvgLogger::SvgLogger(const std::string &filename)
 : _rectangles(nullptr),
   _scheduler(nullptr),
-  _filename(filename)
+  _filename(filename),
+  _max_time(0)
 {
 }
 
@@ -14,20 +15,9 @@ SvgLogger::~SvgLogger()
 {
     std::ofstream svg(_filename.c_str());
 
-    // Find the rectangle with the farthest end time
-    unsigned int maxEndTime = 0;
-
-    for (unsigned int i=0; i<_scheduler->taskCount(); ++i) {
-        const std::list<Rect> &rectangles = _rectangles[i];
-
-        if (rectangles.size() > 0 && rectangles.back().endTime() > maxEndTime) {
-            maxEndTime = rectangles.back().endTime();
-        }
-    }
-
     // SVG header
     svg << "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\"?>\n";
-    svg << "<svg width=\"" << (timeToX(maxEndTime) + 30) << "\" "
+    svg << "<svg width=\"" << (timeToX(_max_time) + 30) << "\" "
         << "height=\"" << (_scheduler->taskCount() * 20 + 30) << "\" "
         << "version=\"1.1\" xmlns:svg=\"http://www.w3.org/2000/svg\" xmlns=\"http://www.w3.org/2000/svg\">\n";
 
@@ -68,17 +58,20 @@ SvgLogger::~SvgLogger()
     }
 
     svg << "  <path d=\"M 25,0 25," << height << "\" style=\"stroke-width:1;stroke:#000000;\" />\n";
-    svg << "  <path d=\"M 25," << height << " " << (timeToX(maxEndTime) + 30) << "," << height << "\" style=\"stroke-width:1;stroke:#000000;\" />\n";
+    svg << "  <path d=\"M 25," << height << " " << (timeToX(_max_time) + 30) << "," << height << "\" style=\"stroke-width:1;stroke:#000000;\" />\n";
 
     // Vertical lines
-    for (unsigned int i=0; i<maxEndTime; i+= 25) {
+    for (unsigned int i=0; i<_max_time; i+= 10) {
         unsigned int x = timeToX(i) + 30;
 
         svg << "  <path d=\"M " << x << ",0 " << x << ", " << height << "\" style=\"stroke-width:1;stroke:#888888;stroke-dasharray:4,4\" />\n";
-        svg << "  <text "
-            << "x=\"" << x << "\" "
-            << "y=\"" << (height + 25) << "\" "
-            << "style=\"font-size:13px;text-anchor:middle;\">" << i << "</text>\n";
+
+        if (i % 20 == 0) {
+            svg << "  <text "
+                << "x=\"" << x << "\" "
+                << "y=\"" << (height + 25) << "\" "
+                << "style=\"font-size:13px;text-anchor:middle;\">" << i << "</text>\n";
+        }
     }
 
     // Draw the rectangles of the tasks
@@ -140,7 +133,7 @@ SvgLogger::~SvgLogger()
     for (unsigned int i=0; i<_scheduler->taskCount(); ++i) {
         const AbstractScheduler::Task &t = _scheduler->task(i);
 
-        for (unsigned int time=t.offset; time<maxEndTime; time += t.period) {
+        for (unsigned int time=t.offset; time<_max_time; time += t.period) {
             unsigned int x = timeToX(time) + 30;
             unsigned int x2 = x + timeToX(t.deadline);
             unsigned int y = i * 20;
@@ -209,6 +202,7 @@ void SvgLogger::notifyActivity(AbstractScheduler *scheduler,
                                Activity activity)
 {
     _scheduler = scheduler;
+    _max_time = std::max(_max_time, time);
 
     if (task == -1) {
         return;

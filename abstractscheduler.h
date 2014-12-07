@@ -14,6 +14,7 @@ class AbstractScheduler
          */
         struct Task
         {
+            unsigned int index;             /*!< @brief Index of the task in the system file */
             unsigned int offset;            /*!< @brief Time at which the first job of this task is released */
             unsigned int execution_time;    /*!< @brief Worst case execution time */
             unsigned int deadline;          /*!< @brief Deadline (relative, un number of ticks after the release time) */
