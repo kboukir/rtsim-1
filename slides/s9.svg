@@ -17,9 +17,6 @@
    <stop style="stop-color:#BFFFBF;stop-opacity:1;" offset="0" />
    <stop style="stop-color:#80FF80;stop-opacity:1;" offset="1" />
   </linearGradient>
-  <filter id="blur">
-   <feGaussianBlur stdDeviation="2.85" />
-  </filter>
  </defs>
  <g>
   <text x="0" y="15" style="font-size:13px;">T1</text>
@@ -49,13 +46,13 @@
   <path d="M 310,0 310, 25" style="stroke-width:1;stroke:#888888;stroke-dasharray:4,4" />
   <text x="310" y="50" style="font-size:13px;text-anchor:middle;">140</text>
   <path d="M 330,0 330, 25" style="stroke-width:1;stroke:#888888;stroke-dasharray:4,4" />
-  <rect x="32" y="2" width="60" height="20" style="color:#000000;fill:#000000;opacity:0.3;filter:url(#blur);" />
+  <rect x="32" y="2" width="60" height="20" style="color:#000000;fill:#000000;opacity:0.3" />
   <rect x="30" y="0" width="60" height="20" style="fill:url(#grad1);stroke:#000000;stroke-width:1;" />
-  <rect x="232" y="2" width="60" height="20" style="color:#000000;fill:#000000;opacity:0.3;filter:url(#blur);" />
+  <rect x="232" y="2" width="60" height="20" style="color:#000000;fill:#000000;opacity:0.3" />
   <rect x="230" y="0" width="60" height="20" style="fill:url(#grad1);stroke:#000000;stroke-width:1;" />
-  <path d="M 30,0 30,20" style="stroke-width:1;stroke:#000000;marker-end:url(#Arrow1Lend);" />
+  <path d="M 30,0 30,20 25,15 30,20 35,15 30,20" style="stroke-width:1;stroke:#000000;fill:transparent;stroke-linejoin:bevel;" />
   <rect x="127" y="14" width="6" height="6" style="fill:#ffffff;stroke-width:1;stroke:#000000;" />
-  <path d="M 230,0 230,20" style="stroke-width:1;stroke:#000000;marker-end:url(#Arrow1Lend);" />
+  <path d="M 230,0 230,20 225,15 230,20 235,15 230,20" style="stroke-width:1;stroke:#000000;fill:transparent;stroke-linejoin:bevel;" />
   <rect x="327" y="14" width="6" height="6" style="fill:#ffffff;stroke-width:1;stroke:#000000;" />
  </g>
 </svg>

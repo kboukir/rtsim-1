@@ -17,9 +17,6 @@
    <stop style="stop-color:#BFFFBF;stop-opacity:1;" offset="0" />
    <stop style="stop-color:#80FF80;stop-opacity:1;" offset="1" />
   </linearGradient>
-  <filter id="blur">
-   <feGaussianBlur stdDeviation="2.85" />
-  </filter>
  </defs>
  <g>
   <text x="0" y="15" style="font-size:13px;">T1</text>
@@ -432,283 +429,283 @@
   <path d="M 5390,0 5390, 65" style="stroke-width:1;stroke:#888888;stroke-dasharray:4,4" />
   <text x="5390" y="90" style="font-size:13px;text-anchor:middle;">2680</text>
   <path d="M 5410,0 5410, 65" style="stroke-width:1;stroke:#888888;stroke-dasharray:4,4" />
-  <rect x="32" y="2" width="140" height="20" style="color:#000000;fill:#000000;opacity:0.3;filter:url(#blur);" />
+  <rect x="32" y="2" width="140" height="20" style="color:#000000;fill:#000000;opacity:0.3" />
   <rect x="30" y="0" width="140" height="20" style="fill:url(#grad1);stroke:#000000;stroke-width:1;" />
-  <rect x="232" y="2" width="140" height="20" style="color:#000000;fill:#000000;opacity:0.3;filter:url(#blur);" />
+  <rect x="232" y="2" width="140" height="20" style="color:#000000;fill:#000000;opacity:0.3" />
   <rect x="230" y="0" width="140" height="20" style="fill:url(#grad1);stroke:#000000;stroke-width:1;" />
-  <rect x="432" y="2" width="140" height="20" style="color:#000000;fill:#000000;opacity:0.3;filter:url(#blur);" />
+  <rect x="432" y="2" width="140" height="20" style="color:#000000;fill:#000000;opacity:0.3" />
   <rect x="430" y="0" width="140" height="20" style="fill:url(#grad1);stroke:#000000;stroke-width:1;" />
-  <rect x="632" y="2" width="140" height="20" style="color:#000000;fill:#000000;opacity:0.3;filter:url(#blur);" />
+  <rect x="632" y="2" width="140" height="20" style="color:#000000;fill:#000000;opacity:0.3" />
   <rect x="630" y="0" width="140" height="20" style="fill:url(#grad1);stroke:#000000;stroke-width:1;" />
-  <rect x="832" y="2" width="140" height="20" style="color:#000000;fill:#000000;opacity:0.3;filter:url(#blur);" />
+  <rect x="832" y="2" width="140" height="20" style="color:#000000;fill:#000000;opacity:0.3" />
   <rect x="830" y="0" width="140" height="20" style="fill:url(#grad1);stroke:#000000;stroke-width:1;" />
-  <rect x="1032" y="2" width="140" height="20" style="color:#000000;fill:#000000;opacity:0.3;filter:url(#blur);" />
+  <rect x="1032" y="2" width="140" height="20" style="color:#000000;fill:#000000;opacity:0.3" />
   <rect x="1030" y="0" width="140" height="20" style="fill:url(#grad1);stroke:#000000;stroke-width:1;" />
-  <rect x="1232" y="2" width="140" height="20" style="color:#000000;fill:#000000;opacity:0.3;filter:url(#blur);" />
+  <rect x="1232" y="2" width="140" height="20" style="color:#000000;fill:#000000;opacity:0.3" />
   <rect x="1230" y="0" width="140" height="20" style="fill:url(#grad1);stroke:#000000;stroke-width:1;" />
-  <rect x="1432" y="2" width="140" height="20" style="color:#000000;fill:#000000;opacity:0.3;filter:url(#blur);" />
+  <rect x="1432" y="2" width="140" height="20" style="color:#000000;fill:#000000;opacity:0.3" />
   <rect x="1430" y="0" width="140" height="20" style="fill:url(#grad1);stroke:#000000;stroke-width:1;" />
-  <rect x="1632" y="2" width="140" height="20" style="color:#000000;fill:#000000;opacity:0.3;filter:url(#blur);" />
+  <rect x="1632" y="2" width="140" height="20" style="color:#000000;fill:#000000;opacity:0.3" />
   <rect x="1630" y="0" width="140" height="20" style="fill:url(#grad1);stroke:#000000;stroke-width:1;" />
-  <rect x="1832" y="2" width="140" height="20" style="color:#000000;fill:#000000;opacity:0.3;filter:url(#blur);" />
+  <rect x="1832" y="2" width="140" height="20" style="color:#000000;fill:#000000;opacity:0.3" />
   <rect x="1830" y="0" width="140" height="20" style="fill:url(#grad1);stroke:#000000;stroke-width:1;" />
-  <rect x="2032" y="2" width="140" height="20" style="color:#000000;fill:#000000;opacity:0.3;filter:url(#blur);" />
+  <rect x="2032" y="2" width="140" height="20" style="color:#000000;fill:#000000;opacity:0.3" />
   <rect x="2030" y="0" width="140" height="20" style="fill:url(#grad1);stroke:#000000;stroke-width:1;" />
-  <rect x="2232" y="2" width="140" height="20" style="color:#000000;fill:#000000;opacity:0.3;filter:url(#blur);" />
+  <rect x="2232" y="2" width="140" height="20" style="color:#000000;fill:#000000;opacity:0.3" />
   <rect x="2230" y="0" width="140" height="20" style="fill:url(#grad1);stroke:#000000;stroke-width:1;" />
-  <rect x="2432" y="2" width="140" height="20" style="color:#000000;fill:#000000;opacity:0.3;filter:url(#blur);" />
+  <rect x="2432" y="2" width="140" height="20" style="color:#000000;fill:#000000;opacity:0.3" />
   <rect x="2430" y="0" width="140" height="20" style="fill:url(#grad1);stroke:#000000;stroke-width:1;" />
-  <rect x="2632" y="2" width="140" height="20" style="color:#000000;fill:#000000;opacity:0.3;filter:url(#blur);" />
+  <rect x="2632" y="2" width="140" height="20" style="color:#000000;fill:#000000;opacity:0.3" />
   <rect x="2630" y="0" width="140" height="20" style="fill:url(#grad1);stroke:#000000;stroke-width:1;" />
-  <rect x="2832" y="2" width="140" height="20" style="color:#000000;fill:#000000;opacity:0.3;filter:url(#blur);" />
+  <rect x="2832" y="2" width="140" height="20" style="color:#000000;fill:#000000;opacity:0.3" />
   <rect x="2830" y="0" width="140" height="20" style="fill:url(#grad1);stroke:#000000;stroke-width:1;" />
-  <rect x="3032" y="2" width="140" height="20" style="color:#000000;fill:#000000;opacity:0.3;filter:url(#blur);" />
+  <rect x="3032" y="2" width="140" height="20" style="color:#000000;fill:#000000;opacity:0.3" />
   <rect x="3030" y="0" width="140" height="20" style="fill:url(#grad1);stroke:#000000;stroke-width:1;" />
-  <rect x="3232" y="2" width="140" height="20" style="color:#000000;fill:#000000;opacity:0.3;filter:url(#blur);" />
+  <rect x="3232" y="2" width="140" height="20" style="color:#000000;fill:#000000;opacity:0.3" />
   <rect x="3230" y="0" width="140" height="20" style="fill:url(#grad1);stroke:#000000;stroke-width:1;" />
-  <rect x="3432" y="2" width="140" height="20" style="color:#000000;fill:#000000;opacity:0.3;filter:url(#blur);" />
+  <rect x="3432" y="2" width="140" height="20" style="color:#000000;fill:#000000;opacity:0.3" />
   <rect x="3430" y="0" width="140" height="20" style="fill:url(#grad1);stroke:#000000;stroke-width:1;" />
-  <rect x="3632" y="2" width="140" height="20" style="color:#000000;fill:#000000;opacity:0.3;filter:url(#blur);" />
+  <rect x="3632" y="2" width="140" height="20" style="color:#000000;fill:#000000;opacity:0.3" />
   <rect x="3630" y="0" width="140" height="20" style="fill:url(#grad1);stroke:#000000;stroke-width:1;" />
-  <rect x="3832" y="2" width="140" height="20" style="color:#000000;fill:#000000;opacity:0.3;filter:url(#blur);" />
+  <rect x="3832" y="2" width="140" height="20" style="color:#000000;fill:#000000;opacity:0.3" />
   <rect x="3830" y="0" width="140" height="20" style="fill:url(#grad1);stroke:#000000;stroke-width:1;" />
-  <rect x="4032" y="2" width="140" height="20" style="color:#000000;fill:#000000;opacity:0.3;filter:url(#blur);" />
+  <rect x="4032" y="2" width="140" height="20" style="color:#000000;fill:#000000;opacity:0.3" />
   <rect x="4030" y="0" width="140" height="20" style="fill:url(#grad1);stroke:#000000;stroke-width:1;" />
-  <rect x="4232" y="2" width="140" height="20" style="color:#000000;fill:#000000;opacity:0.3;filter:url(#blur);" />
+  <rect x="4232" y="2" width="140" height="20" style="color:#000000;fill:#000000;opacity:0.3" />
   <rect x="4230" y="0" width="140" height="20" style="fill:url(#grad1);stroke:#000000;stroke-width:1;" />
-  <rect x="4432" y="2" width="140" height="20" style="color:#000000;fill:#000000;opacity:0.3;filter:url(#blur);" />
+  <rect x="4432" y="2" width="140" height="20" style="color:#000000;fill:#000000;opacity:0.3" />
   <rect x="4430" y="0" width="140" height="20" style="fill:url(#grad1);stroke:#000000;stroke-width:1;" />
-  <rect x="4632" y="2" width="140" height="20" style="color:#000000;fill:#000000;opacity:0.3;filter:url(#blur);" />
+  <rect x="4632" y="2" width="140" height="20" style="color:#000000;fill:#000000;opacity:0.3" />
   <rect x="4630" y="0" width="140" height="20" style="fill:url(#grad1);stroke:#000000;stroke-width:1;" />
-  <rect x="4832" y="2" width="140" height="20" style="color:#000000;fill:#000000;opacity:0.3;filter:url(#blur);" />
+  <rect x="4832" y="2" width="140" height="20" style="color:#000000;fill:#000000;opacity:0.3" />
   <rect x="4830" y="0" width="140" height="20" style="fill:url(#grad1);stroke:#000000;stroke-width:1;" />
-  <rect x="5032" y="2" width="140" height="20" style="color:#000000;fill:#000000;opacity:0.3;filter:url(#blur);" />
+  <rect x="5032" y="2" width="140" height="20" style="color:#000000;fill:#000000;opacity:0.3" />
   <rect x="5030" y="0" width="140" height="20" style="fill:url(#grad1);stroke:#000000;stroke-width:1;" />
-  <rect x="5232" y="2" width="140" height="20" style="color:#000000;fill:#000000;opacity:0.3;filter:url(#blur);" />
+  <rect x="5232" y="2" width="140" height="20" style="color:#000000;fill:#000000;opacity:0.3" />
   <rect x="5230" y="0" width="140" height="20" style="fill:url(#grad1);stroke:#000000;stroke-width:1;" />
-  <rect x="172" y="22" width="20" height="20" style="color:#000000;fill:#000000;opacity:0.3;filter:url(#blur);" />
+  <rect x="172" y="22" width="20" height="20" style="color:#000000;fill:#000000;opacity:0.3" />
   <rect x="170" y="20" width="20" height="20" style="fill:url(#grad2);stroke:#000000;stroke-width:1;" />
-  <rect x="372" y="22" width="20" height="20" style="color:#000000;fill:#000000;opacity:0.3;filter:url(#blur);" />
+  <rect x="372" y="22" width="20" height="20" style="color:#000000;fill:#000000;opacity:0.3" />
   <rect x="370" y="20" width="20" height="20" style="fill:url(#grad2);stroke:#000000;stroke-width:1;" />
-  <rect x="772" y="22" width="20" height="20" style="color:#000000;fill:#000000;opacity:0.3;filter:url(#blur);" />
+  <rect x="772" y="22" width="20" height="20" style="color:#000000;fill:#000000;opacity:0.3" />
   <rect x="770" y="20" width="20" height="20" style="fill:url(#grad2);stroke:#000000;stroke-width:1;" />
-  <rect x="992" y="22" width="20" height="20" style="color:#000000;fill:#000000;opacity:0.3;filter:url(#blur);" />
+  <rect x="992" y="22" width="20" height="20" style="color:#000000;fill:#000000;opacity:0.3" />
   <rect x="990" y="20" width="20" height="20" style="fill:url(#grad2);stroke:#000000;stroke-width:1;" />
-  <rect x="1372" y="22" width="20" height="20" style="color:#000000;fill:#000000;opacity:0.3;filter:url(#blur);" />
+  <rect x="1372" y="22" width="20" height="20" style="color:#000000;fill:#000000;opacity:0.3" />
   <rect x="1370" y="20" width="20" height="20" style="fill:url(#grad2);stroke:#000000;stroke-width:1;" />
-  <rect x="1772" y="22" width="20" height="20" style="color:#000000;fill:#000000;opacity:0.3;filter:url(#blur);" />
+  <rect x="1772" y="22" width="20" height="20" style="color:#000000;fill:#000000;opacity:0.3" />
   <rect x="1770" y="20" width="20" height="20" style="fill:url(#grad2);stroke:#000000;stroke-width:1;" />
-  <rect x="1972" y="22" width="20" height="20" style="color:#000000;fill:#000000;opacity:0.3;filter:url(#blur);" />
+  <rect x="1972" y="22" width="20" height="20" style="color:#000000;fill:#000000;opacity:0.3" />
   <rect x="1970" y="20" width="20" height="20" style="fill:url(#grad2);stroke:#000000;stroke-width:1;" />
-  <rect x="2372" y="22" width="20" height="20" style="color:#000000;fill:#000000;opacity:0.3;filter:url(#blur);" />
+  <rect x="2372" y="22" width="20" height="20" style="color:#000000;fill:#000000;opacity:0.3" />
   <rect x="2370" y="20" width="20" height="20" style="fill:url(#grad2);stroke:#000000;stroke-width:1;" />
-  <rect x="2592" y="22" width="20" height="20" style="color:#000000;fill:#000000;opacity:0.3;filter:url(#blur);" />
+  <rect x="2592" y="22" width="20" height="20" style="color:#000000;fill:#000000;opacity:0.3" />
   <rect x="2590" y="20" width="20" height="20" style="fill:url(#grad2);stroke:#000000;stroke-width:1;" />
-  <rect x="2972" y="22" width="20" height="20" style="color:#000000;fill:#000000;opacity:0.3;filter:url(#blur);" />
+  <rect x="2972" y="22" width="20" height="20" style="color:#000000;fill:#000000;opacity:0.3" />
   <rect x="2970" y="20" width="20" height="20" style="fill:url(#grad2);stroke:#000000;stroke-width:1;" />
-  <rect x="3372" y="22" width="20" height="20" style="color:#000000;fill:#000000;opacity:0.3;filter:url(#blur);" />
+  <rect x="3372" y="22" width="20" height="20" style="color:#000000;fill:#000000;opacity:0.3" />
   <rect x="3370" y="20" width="20" height="20" style="fill:url(#grad2);stroke:#000000;stroke-width:1;" />
-  <rect x="3572" y="22" width="20" height="20" style="color:#000000;fill:#000000;opacity:0.3;filter:url(#blur);" />
+  <rect x="3572" y="22" width="20" height="20" style="color:#000000;fill:#000000;opacity:0.3" />
   <rect x="3570" y="20" width="20" height="20" style="fill:url(#grad2);stroke:#000000;stroke-width:1;" />
-  <rect x="3972" y="22" width="20" height="20" style="color:#000000;fill:#000000;opacity:0.3;filter:url(#blur);" />
+  <rect x="3972" y="22" width="20" height="20" style="color:#000000;fill:#000000;opacity:0.3" />
   <rect x="3970" y="20" width="20" height="20" style="fill:url(#grad2);stroke:#000000;stroke-width:1;" />
-  <rect x="4192" y="22" width="20" height="20" style="color:#000000;fill:#000000;opacity:0.3;filter:url(#blur);" />
+  <rect x="4192" y="22" width="20" height="20" style="color:#000000;fill:#000000;opacity:0.3" />
   <rect x="4190" y="20" width="20" height="20" style="fill:url(#grad2);stroke:#000000;stroke-width:1;" />
-  <rect x="4572" y="22" width="20" height="20" style="color:#000000;fill:#000000;opacity:0.3;filter:url(#blur);" />
+  <rect x="4572" y="22" width="20" height="20" style="color:#000000;fill:#000000;opacity:0.3" />
   <rect x="4570" y="20" width="20" height="20" style="fill:url(#grad2);stroke:#000000;stroke-width:1;" />
-  <rect x="4972" y="22" width="20" height="20" style="color:#000000;fill:#000000;opacity:0.3;filter:url(#blur);" />
+  <rect x="4972" y="22" width="20" height="20" style="color:#000000;fill:#000000;opacity:0.3" />
   <rect x="4970" y="20" width="20" height="20" style="fill:url(#grad2);stroke:#000000;stroke-width:1;" />
-  <rect x="5172" y="22" width="20" height="20" style="color:#000000;fill:#000000;opacity:0.3;filter:url(#blur);" />
+  <rect x="5172" y="22" width="20" height="20" style="color:#000000;fill:#000000;opacity:0.3" />
   <rect x="5170" y="20" width="20" height="20" style="fill:url(#grad2);stroke:#000000;stroke-width:1;" />
-  <rect x="192" y="42" width="40" height="20" style="color:#000000;fill:#000000;opacity:0.3;filter:url(#blur);" />
+  <rect x="192" y="42" width="40" height="20" style="color:#000000;fill:#000000;opacity:0.3" />
   <rect x="190" y="40" width="40" height="20" style="fill:url(#grad3);stroke:#000000;stroke-width:1;" />
-  <rect x="392" y="42" width="40" height="20" style="color:#000000;fill:#000000;opacity:0.3;filter:url(#blur);" />
+  <rect x="392" y="42" width="40" height="20" style="color:#000000;fill:#000000;opacity:0.3" />
   <rect x="390" y="40" width="40" height="20" style="fill:url(#grad3);stroke:#000000;stroke-width:1;" />
-  <rect x="572" y="42" width="40" height="20" style="color:#000000;fill:#000000;opacity:0.3;filter:url(#blur);" />
+  <rect x="572" y="42" width="40" height="20" style="color:#000000;fill:#000000;opacity:0.3" />
   <rect x="570" y="40" width="40" height="20" style="fill:url(#grad3);stroke:#000000;stroke-width:1;" />
-  <rect x="792" y="42" width="40" height="20" style="color:#000000;fill:#000000;opacity:0.3;filter:url(#blur);" />
+  <rect x="792" y="42" width="40" height="20" style="color:#000000;fill:#000000;opacity:0.3" />
   <rect x="790" y="40" width="40" height="20" style="fill:url(#grad3);stroke:#000000;stroke-width:1;" />
-  <rect x="972" y="42" width="20" height="20" style="color:#000000;fill:#000000;opacity:0.3;filter:url(#blur);" />
+  <rect x="972" y="42" width="20" height="20" style="color:#000000;fill:#000000;opacity:0.3" />
   <rect x="970" y="40" width="20" height="20" style="fill:url(#grad3);stroke:#000000;stroke-width:1;" />
-  <rect x="1012" y="42" width="20" height="20" style="color:#000000;fill:#000000;opacity:0.3;filter:url(#blur);" />
+  <rect x="1012" y="42" width="20" height="20" style="color:#000000;fill:#000000;opacity:0.3" />
   <rect x="1010" y="40" width="20" height="20" style="fill:url(#grad3);stroke:#000000;stroke-width:1;" />
-  <rect x="1172" y="42" width="40" height="20" style="color:#000000;fill:#000000;opacity:0.3;filter:url(#blur);" />
+  <rect x="1172" y="42" width="40" height="20" style="color:#000000;fill:#000000;opacity:0.3" />
   <rect x="1170" y="40" width="40" height="20" style="fill:url(#grad3);stroke:#000000;stroke-width:1;" />
-  <rect x="1392" y="42" width="40" height="20" style="color:#000000;fill:#000000;opacity:0.3;filter:url(#blur);" />
+  <rect x="1392" y="42" width="40" height="20" style="color:#000000;fill:#000000;opacity:0.3" />
   <rect x="1390" y="40" width="40" height="20" style="fill:url(#grad3);stroke:#000000;stroke-width:1;" />
-  <rect x="1572" y="42" width="20" height="20" style="color:#000000;fill:#000000;opacity:0.3;filter:url(#blur);" />
+  <rect x="1572" y="42" width="20" height="20" style="color:#000000;fill:#000000;opacity:0.3" />
   <rect x="1570" y="40" width="20" height="20" style="fill:url(#grad3);stroke:#000000;stroke-width:1;" />
-  <rect x="1612" y="42" width="20" height="20" style="color:#000000;fill:#000000;opacity:0.3;filter:url(#blur);" />
+  <rect x="1612" y="42" width="20" height="20" style="color:#000000;fill:#000000;opacity:0.3" />
   <rect x="1610" y="40" width="20" height="20" style="fill:url(#grad3);stroke:#000000;stroke-width:1;" />
-  <rect x="1792" y="42" width="40" height="20" style="color:#000000;fill:#000000;opacity:0.3;filter:url(#blur);" />
+  <rect x="1792" y="42" width="40" height="20" style="color:#000000;fill:#000000;opacity:0.3" />
   <rect x="1790" y="40" width="40" height="20" style="fill:url(#grad3);stroke:#000000;stroke-width:1;" />
-  <rect x="1992" y="42" width="40" height="20" style="color:#000000;fill:#000000;opacity:0.3;filter:url(#blur);" />
+  <rect x="1992" y="42" width="40" height="20" style="color:#000000;fill:#000000;opacity:0.3" />
   <rect x="1990" y="40" width="40" height="20" style="fill:url(#grad3);stroke:#000000;stroke-width:1;" />
-  <rect x="2172" y="42" width="20" height="20" style="color:#000000;fill:#000000;opacity:0.3;filter:url(#blur);" />
+  <rect x="2172" y="42" width="20" height="20" style="color:#000000;fill:#000000;opacity:0.3" />
   <rect x="2170" y="40" width="20" height="20" style="fill:url(#grad3);stroke:#000000;stroke-width:1;" />
-  <rect x="2212" y="42" width="20" height="20" style="color:#000000;fill:#000000;opacity:0.3;filter:url(#blur);" />
+  <rect x="2212" y="42" width="20" height="20" style="color:#000000;fill:#000000;opacity:0.3" />
   <rect x="2210" y="40" width="20" height="20" style="fill:url(#grad3);stroke:#000000;stroke-width:1;" />
-  <rect x="2392" y="42" width="40" height="20" style="color:#000000;fill:#000000;opacity:0.3;filter:url(#blur);" />
+  <rect x="2392" y="42" width="40" height="20" style="color:#000000;fill:#000000;opacity:0.3" />
   <rect x="2390" y="40" width="40" height="20" style="fill:url(#grad3);stroke:#000000;stroke-width:1;" />
-  <rect x="2572" y="42" width="20" height="20" style="color:#000000;fill:#000000;opacity:0.3;filter:url(#blur);" />
+  <rect x="2572" y="42" width="20" height="20" style="color:#000000;fill:#000000;opacity:0.3" />
   <rect x="2570" y="40" width="20" height="20" style="fill:url(#grad3);stroke:#000000;stroke-width:1;" />
-  <rect x="2612" y="42" width="20" height="20" style="color:#000000;fill:#000000;opacity:0.3;filter:url(#blur);" />
+  <rect x="2612" y="42" width="20" height="20" style="color:#000000;fill:#000000;opacity:0.3" />
   <rect x="2610" y="40" width="20" height="20" style="fill:url(#grad3);stroke:#000000;stroke-width:1;" />
-  <rect x="2772" y="42" width="20" height="20" style="color:#000000;fill:#000000;opacity:0.3;filter:url(#blur);" />
+  <rect x="2772" y="42" width="20" height="20" style="color:#000000;fill:#000000;opacity:0.3" />
   <rect x="2770" y="40" width="20" height="20" style="fill:url(#grad3);stroke:#000000;stroke-width:1;" />
-  <rect x="2812" y="42" width="20" height="20" style="color:#000000;fill:#000000;opacity:0.3;filter:url(#blur);" />
+  <rect x="2812" y="42" width="20" height="20" style="color:#000000;fill:#000000;opacity:0.3" />
   <rect x="2810" y="40" width="20" height="20" style="fill:url(#grad3);stroke:#000000;stroke-width:1;" />
-  <rect x="2992" y="42" width="40" height="20" style="color:#000000;fill:#000000;opacity:0.3;filter:url(#blur);" />
+  <rect x="2992" y="42" width="40" height="20" style="color:#000000;fill:#000000;opacity:0.3" />
   <rect x="2990" y="40" width="40" height="20" style="fill:url(#grad3);stroke:#000000;stroke-width:1;" />
-  <rect x="3172" y="42" width="60" height="20" style="color:#000000;fill:#000000;opacity:0.3;filter:url(#blur);" />
+  <rect x="3172" y="42" width="60" height="20" style="color:#000000;fill:#000000;opacity:0.3" />
   <rect x="3170" y="40" width="60" height="20" style="fill:url(#grad3);stroke:#000000;stroke-width:1;" />
-  <rect x="3412" y="42" width="20" height="20" style="color:#000000;fill:#000000;opacity:0.3;filter:url(#blur);" />
+  <rect x="3412" y="42" width="20" height="20" style="color:#000000;fill:#000000;opacity:0.3" />
   <rect x="3410" y="40" width="20" height="20" style="fill:url(#grad3);stroke:#000000;stroke-width:1;" />
-  <rect x="3592" y="42" width="40" height="20" style="color:#000000;fill:#000000;opacity:0.3;filter:url(#blur);" />
+  <rect x="3592" y="42" width="40" height="20" style="color:#000000;fill:#000000;opacity:0.3" />
   <rect x="3590" y="40" width="40" height="20" style="fill:url(#grad3);stroke:#000000;stroke-width:1;" />
-  <rect x="3772" y="42" width="60" height="20" style="color:#000000;fill:#000000;opacity:0.3;filter:url(#blur);" />
+  <rect x="3772" y="42" width="60" height="20" style="color:#000000;fill:#000000;opacity:0.3" />
   <rect x="3770" y="40" width="60" height="20" style="fill:url(#grad3);stroke:#000000;stroke-width:1;" />
-  <rect x="4012" y="42" width="20" height="20" style="color:#000000;fill:#000000;opacity:0.3;filter:url(#blur);" />
+  <rect x="4012" y="42" width="20" height="20" style="color:#000000;fill:#000000;opacity:0.3" />
   <rect x="4010" y="40" width="20" height="20" style="fill:url(#grad3);stroke:#000000;stroke-width:1;" />
-  <rect x="4172" y="42" width="20" height="20" style="color:#000000;fill:#000000;opacity:0.3;filter:url(#blur);" />
+  <rect x="4172" y="42" width="20" height="20" style="color:#000000;fill:#000000;opacity:0.3" />
   <rect x="4170" y="40" width="20" height="20" style="fill:url(#grad3);stroke:#000000;stroke-width:1;" />
-  <rect x="4212" y="42" width="20" height="20" style="color:#000000;fill:#000000;opacity:0.3;filter:url(#blur);" />
+  <rect x="4212" y="42" width="20" height="20" style="color:#000000;fill:#000000;opacity:0.3" />
   <rect x="4210" y="40" width="20" height="20" style="fill:url(#grad3);stroke:#000000;stroke-width:1;" />
-  <rect x="4372" y="42" width="60" height="20" style="color:#000000;fill:#000000;opacity:0.3;filter:url(#blur);" />
+  <rect x="4372" y="42" width="60" height="20" style="color:#000000;fill:#000000;opacity:0.3" />
   <rect x="4370" y="40" width="60" height="20" style="fill:url(#grad3);stroke:#000000;stroke-width:1;" />
-  <rect x="4612" y="42" width="20" height="20" style="color:#000000;fill:#000000;opacity:0.3;filter:url(#blur);" />
+  <rect x="4612" y="42" width="20" height="20" style="color:#000000;fill:#000000;opacity:0.3" />
   <rect x="4610" y="40" width="20" height="20" style="fill:url(#grad3);stroke:#000000;stroke-width:1;" />
-  <rect x="4772" y="42" width="40" height="20" style="color:#000000;fill:#000000;opacity:0.3;filter:url(#blur);" />
+  <rect x="4772" y="42" width="40" height="20" style="color:#000000;fill:#000000;opacity:0.3" />
   <rect x="4770" y="40" width="40" height="20" style="fill:url(#grad3);stroke:#000000;stroke-width:1;" />
-  <rect x="4992" y="42" width="40" height="20" style="color:#000000;fill:#000000;opacity:0.3;filter:url(#blur);" />
+  <rect x="4992" y="42" width="40" height="20" style="color:#000000;fill:#000000;opacity:0.3" />
   <rect x="4990" y="40" width="40" height="20" style="fill:url(#grad3);stroke:#000000;stroke-width:1;" />
-  <rect x="5192" y="42" width="40" height="20" style="color:#000000;fill:#000000;opacity:0.3;filter:url(#blur);" />
+  <rect x="5192" y="42" width="40" height="20" style="color:#000000;fill:#000000;opacity:0.3" />
   <rect x="5190" y="40" width="40" height="20" style="fill:url(#grad3);stroke:#000000;stroke-width:1;" />
-  <rect x="5372" y="42" width="40" height="20" style="color:#000000;fill:#000000;opacity:0.3;filter:url(#blur);" />
+  <rect x="5372" y="42" width="40" height="20" style="color:#000000;fill:#000000;opacity:0.3" />
   <rect x="5370" y="40" width="40" height="20" style="fill:url(#grad3);stroke:#000000;stroke-width:1;" />
-  <path d="M 30,0 30,20" style="stroke-width:1;stroke:#000000;marker-end:url(#Arrow1Lend);" />
+  <path d="M 30,0 30,20 25,15 30,20 35,15 30,20" style="stroke-width:1;stroke:#000000;fill:transparent;stroke-linejoin:bevel;" />
   <rect x="227" y="14" width="6" height="6" style="fill:#ffffff;stroke-width:1;stroke:#000000;" />
-  <path d="M 230,0 230,20" style="stroke-width:1;stroke:#000000;marker-end:url(#Arrow1Lend);" />
+  <path d="M 230,0 230,20 225,15 230,20 235,15 230,20" style="stroke-width:1;stroke:#000000;fill:transparent;stroke-linejoin:bevel;" />
   <rect x="427" y="14" width="6" height="6" style="fill:#ffffff;stroke-width:1;stroke:#000000;" />
-  <path d="M 430,0 430,20" style="stroke-width:1;stroke:#000000;marker-end:url(#Arrow1Lend);" />
+  <path d="M 430,0 430,20 425,15 430,20 435,15 430,20" style="stroke-width:1;stroke:#000000;fill:transparent;stroke-linejoin:bevel;" />
   <rect x="627" y="14" width="6" height="6" style="fill:#ffffff;stroke-width:1;stroke:#000000;" />
-  <path d="M 630,0 630,20" style="stroke-width:1;stroke:#000000;marker-end:url(#Arrow1Lend);" />
+  <path d="M 630,0 630,20 625,15 630,20 635,15 630,20" style="stroke-width:1;stroke:#000000;fill:transparent;stroke-linejoin:bevel;" />
   <rect x="827" y="14" width="6" height="6" style="fill:#ffffff;stroke-width:1;stroke:#000000;" />
-  <path d="M 830,0 830,20" style="stroke-width:1;stroke:#000000;marker-end:url(#Arrow1Lend);" />
+  <path d="M 830,0 830,20 825,15 830,20 835,15 830,20" style="stroke-width:1;stroke:#000000;fill:transparent;stroke-linejoin:bevel;" />
   <rect x="1027" y="14" width="6" height="6" style="fill:#ffffff;stroke-width:1;stroke:#000000;" />
-  <path d="M 1030,0 1030,20" style="stroke-width:1;stroke:#000000;marker-end:url(#Arrow1Lend);" />
+  <path d="M 1030,0 1030,20 1025,15 1030,20 1035,15 1030,20" style="stroke-width:1;stroke:#000000;fill:transparent;stroke-linejoin:bevel;" />
   <rect x="1227" y="14" width="6" height="6" style="fill:#ffffff;stroke-width:1;stroke:#000000;" />
-  <path d="M 1230,0 1230,20" style="stroke-width:1;stroke:#000000;marker-end:url(#Arrow1Lend);" />
+  <path d="M 1230,0 1230,20 1225,15 1230,20 1235,15 1230,20" style="stroke-width:1;stroke:#000000;fill:transparent;stroke-linejoin:bevel;" />
   <rect x="1427" y="14" width="6" height="6" style="fill:#ffffff;stroke-width:1;stroke:#000000;" />
-  <path d="M 1430,0 1430,20" style="stroke-width:1;stroke:#000000;marker-end:url(#Arrow1Lend);" />
+  <path d="M 1430,0 1430,20 1425,15 1430,20 1435,15 1430,20" style="stroke-width:1;stroke:#000000;fill:transparent;stroke-linejoin:bevel;" />
   <rect x="1627" y="14" width="6" height="6" style="fill:#ffffff;stroke-width:1;stroke:#000000;" />
-  <path d="M 1630,0 1630,20" style="stroke-width:1;stroke:#000000;marker-end:url(#Arrow1Lend);" />
+  <path d="M 1630,0 1630,20 1625,15 1630,20 1635,15 1630,20" style="stroke-width:1;stroke:#000000;fill:transparent;stroke-linejoin:bevel;" />
   <rect x="1827" y="14" width="6" height="6" style="fill:#ffffff;stroke-width:1;stroke:#000000;" />
-  <path d="M 1830,0 1830,20" style="stroke-width:1;stroke:#000000;marker-end:url(#Arrow1Lend);" />
+  <path d="M 1830,0 1830,20 1825,15 1830,20 1835,15 1830,20" style="stroke-width:1;stroke:#000000;fill:transparent;stroke-linejoin:bevel;" />
   <rect x="2027" y="14" width="6" height="6" style="fill:#ffffff;stroke-width:1;stroke:#000000;" />
-  <path d="M 2030,0 2030,20" style="stroke-width:1;stroke:#000000;marker-end:url(#Arrow1Lend);" />
+  <path d="M 2030,0 2030,20 2025,15 2030,20 2035,15 2030,20" style="stroke-width:1;stroke:#000000;fill:transparent;stroke-linejoin:bevel;" />
   <rect x="2227" y="14" width="6" height="6" style="fill:#ffffff;stroke-width:1;stroke:#000000;" />
-  <path d="M 2230,0 2230,20" style="stroke-width:1;stroke:#000000;marker-end:url(#Arrow1Lend);" />
+  <path d="M 2230,0 2230,20 2225,15 2230,20 2235,15 2230,20" style="stroke-width:1;stroke:#000000;fill:transparent;stroke-linejoin:bevel;" />
   <rect x="2427" y="14" width="6" height="6" style="fill:#ffffff;stroke-width:1;stroke:#000000;" />
-  <path d="M 2430,0 2430,20" style="stroke-width:1;stroke:#000000;marker-end:url(#Arrow1Lend);" />
+  <path d="M 2430,0 2430,20 2425,15 2430,20 2435,15 2430,20" style="stroke-width:1;stroke:#000000;fill:transparent;stroke-linejoin:bevel;" />
   <rect x="2627" y="14" width="6" height="6" style="fill:#ffffff;stroke-width:1;stroke:#000000;" />
-  <path d="M 2630,0 2630,20" style="stroke-width:1;stroke:#000000;marker-end:url(#Arrow1Lend);" />
+  <path d="M 2630,0 2630,20 2625,15 2630,20 2635,15 2630,20" style="stroke-width:1;stroke:#000000;fill:transparent;stroke-linejoin:bevel;" />
   <rect x="2827" y="14" width="6" height="6" style="fill:#ffffff;stroke-width:1;stroke:#000000;" />
-  <path d="M 2830,0 2830,20" style="stroke-width:1;stroke:#000000;marker-end:url(#Arrow1Lend);" />
+  <path d="M 2830,0 2830,20 2825,15 2830,20 2835,15 2830,20" style="stroke-width:1;stroke:#000000;fill:transparent;stroke-linejoin:bevel;" />
   <rect x="3027" y="14" width="6" height="6" style="fill:#ffffff;stroke-width:1;stroke:#000000;" />
-  <path d="M 3030,0 3030,20" style="stroke-width:1;stroke:#000000;marker-end:url(#Arrow1Lend);" />
+  <path d="M 3030,0 3030,20 3025,15 3030,20 3035,15 3030,20" style="stroke-width:1;stroke:#000000;fill:transparent;stroke-linejoin:bevel;" />
   <rect x="3227" y="14" width="6" height="6" style="fill:#ffffff;stroke-width:1;stroke:#000000;" />
-  <path d="M 3230,0 3230,20" style="stroke-width:1;stroke:#000000;marker-end:url(#Arrow1Lend);" />
+  <path d="M 3230,0 3230,20 3225,15 3230,20 3235,15 3230,20" style="stroke-width:1;stroke:#000000;fill:transparent;stroke-linejoin:bevel;" />
   <rect x="3427" y="14" width="6" height="6" style="fill:#ffffff;stroke-width:1;stroke:#000000;" />
-  <path d="M 3430,0 3430,20" style="stroke-width:1;stroke:#000000;marker-end:url(#Arrow1Lend);" />
+  <path d="M 3430,0 3430,20 3425,15 3430,20 3435,15 3430,20" style="stroke-width:1;stroke:#000000;fill:transparent;stroke-linejoin:bevel;" />
   <rect x="3627" y="14" width="6" height="6" style="fill:#ffffff;stroke-width:1;stroke:#000000;" />
-  <path d="M 3630,0 3630,20" style="stroke-width:1;stroke:#000000;marker-end:url(#Arrow1Lend);" />
+  <path d="M 3630,0 3630,20 3625,15 3630,20 3635,15 3630,20" style="stroke-width:1;stroke:#000000;fill:transparent;stroke-linejoin:bevel;" />
   <rect x="3827" y="14" width="6" height="6" style="fill:#ffffff;stroke-width:1;stroke:#000000;" />
-  <path d="M 3830,0 3830,20" style="stroke-width:1;stroke:#000000;marker-end:url(#Arrow1Lend);" />
+  <path d="M 3830,0 3830,20 3825,15 3830,20 3835,15 3830,20" style="stroke-width:1;stroke:#000000;fill:transparent;stroke-linejoin:bevel;" />
   <rect x="4027" y="14" width="6" height="6" style="fill:#ffffff;stroke-width:1;stroke:#000000;" />
-  <path d="M 4030,0 4030,20" style="stroke-width:1;stroke:#000000;marker-end:url(#Arrow1Lend);" />
+  <path d="M 4030,0 4030,20 4025,15 4030,20 4035,15 4030,20" style="stroke-width:1;stroke:#000000;fill:transparent;stroke-linejoin:bevel;" />
   <rect x="4227" y="14" width="6" height="6" style="fill:#ffffff;stroke-width:1;stroke:#000000;" />
-  <path d="M 4230,0 4230,20" style="stroke-width:1;stroke:#000000;marker-end:url(#Arrow1Lend);" />
+  <path d="M 4230,0 4230,20 4225,15 4230,20 4235,15 4230,20" style="stroke-width:1;stroke:#000000;fill:transparent;stroke-linejoin:bevel;" />
   <rect x="4427" y="14" width="6" height="6" style="fill:#ffffff;stroke-width:1;stroke:#000000;" />
-  <path d="M 4430,0 4430,20" style="stroke-width:1;stroke:#000000;marker-end:url(#Arrow1Lend);" />
+  <path d="M 4430,0 4430,20 4425,15 4430,20 4435,15 4430,20" style="stroke-width:1;stroke:#000000;fill:transparent;stroke-linejoin:bevel;" />
   <rect x="4627" y="14" width="6" height="6" style="fill:#ffffff;stroke-width:1;stroke:#000000;" />
-  <path d="M 4630,0 4630,20" style="stroke-width:1;stroke:#000000;marker-end:url(#Arrow1Lend);" />
+  <path d="M 4630,0 4630,20 4625,15 4630,20 4635,15 4630,20" style="stroke-width:1;stroke:#000000;fill:transparent;stroke-linejoin:bevel;" />
   <rect x="4827" y="14" width="6" height="6" style="fill:#ffffff;stroke-width:1;stroke:#000000;" />
-  <path d="M 4830,0 4830,20" style="stroke-width:1;stroke:#000000;marker-end:url(#Arrow1Lend);" />
+  <path d="M 4830,0 4830,20 4825,15 4830,20 4835,15 4830,20" style="stroke-width:1;stroke:#000000;fill:transparent;stroke-linejoin:bevel;" />
   <rect x="5027" y="14" width="6" height="6" style="fill:#ffffff;stroke-width:1;stroke:#000000;" />
-  <path d="M 5030,0 5030,20" style="stroke-width:1;stroke:#000000;marker-end:url(#Arrow1Lend);" />
+  <path d="M 5030,0 5030,20 5025,15 5030,20 5035,15 5030,20" style="stroke-width:1;stroke:#000000;fill:transparent;stroke-linejoin:bevel;" />
   <rect x="5227" y="14" width="6" height="6" style="fill:#ffffff;stroke-width:1;stroke:#000000;" />
-  <path d="M 5230,0 5230,20" style="stroke-width:1;stroke:#000000;marker-end:url(#Arrow1Lend);" />
+  <path d="M 5230,0 5230,20 5225,15 5230,20 5235,15 5230,20" style="stroke-width:1;stroke:#000000;fill:transparent;stroke-linejoin:bevel;" />
   <rect x="5427" y="14" width="6" height="6" style="fill:#ffffff;stroke-width:1;stroke:#000000;" />
-  <path d="M 30,20 30,40" style="stroke-width:1;stroke:#000000;marker-end:url(#Arrow1Lend);" />
+  <path d="M 30,20 30,40 25,35 30,40 35,35 30,40" style="stroke-width:1;stroke:#000000;fill:transparent;stroke-linejoin:bevel;" />
   <rect x="347" y="34" width="6" height="6" style="fill:#ffffff;stroke-width:1;stroke:#000000;" />
-  <path d="M 350,20 350,40" style="stroke-width:1;stroke:#000000;marker-end:url(#Arrow1Lend);" />
+  <path d="M 350,20 350,40 345,35 350,40 355,35 350,40" style="stroke-width:1;stroke:#000000;fill:transparent;stroke-linejoin:bevel;" />
   <rect x="667" y="34" width="6" height="6" style="fill:#ffffff;stroke-width:1;stroke:#000000;" />
-  <path d="M 670,20 670,40" style="stroke-width:1;stroke:#000000;marker-end:url(#Arrow1Lend);" />
+  <path d="M 670,20 670,40 665,35 670,40 675,35 670,40" style="stroke-width:1;stroke:#000000;fill:transparent;stroke-linejoin:bevel;" />
   <rect x="987" y="34" width="6" height="6" style="fill:#ffffff;stroke-width:1;stroke:#000000;" />
-  <path d="M 990,20 990,40" style="stroke-width:1;stroke:#000000;marker-end:url(#Arrow1Lend);" />
+  <path d="M 990,20 990,40 985,35 990,40 995,35 990,40" style="stroke-width:1;stroke:#000000;fill:transparent;stroke-linejoin:bevel;" />
   <rect x="1307" y="34" width="6" height="6" style="fill:#ffffff;stroke-width:1;stroke:#000000;" />
-  <path d="M 1310,20 1310,40" style="stroke-width:1;stroke:#000000;marker-end:url(#Arrow1Lend);" />
+  <path d="M 1310,20 1310,40 1305,35 1310,40 1315,35 1310,40" style="stroke-width:1;stroke:#000000;fill:transparent;stroke-linejoin:bevel;" />
   <rect x="1627" y="34" width="6" height="6" style="fill:#ffffff;stroke-width:1;stroke:#000000;" />
-  <path d="M 1630,20 1630,40" style="stroke-width:1;stroke:#000000;marker-end:url(#Arrow1Lend);" />
+  <path d="M 1630,20 1630,40 1625,35 1630,40 1635,35 1630,40" style="stroke-width:1;stroke:#000000;fill:transparent;stroke-linejoin:bevel;" />
   <rect x="1947" y="34" width="6" height="6" style="fill:#ffffff;stroke-width:1;stroke:#000000;" />
-  <path d="M 1950,20 1950,40" style="stroke-width:1;stroke:#000000;marker-end:url(#Arrow1Lend);" />
+  <path d="M 1950,20 1950,40 1945,35 1950,40 1955,35 1950,40" style="stroke-width:1;stroke:#000000;fill:transparent;stroke-linejoin:bevel;" />
   <rect x="2267" y="34" width="6" height="6" style="fill:#ffffff;stroke-width:1;stroke:#000000;" />
-  <path d="M 2270,20 2270,40" style="stroke-width:1;stroke:#000000;marker-end:url(#Arrow1Lend);" />
+  <path d="M 2270,20 2270,40 2265,35 2270,40 2275,35 2270,40" style="stroke-width:1;stroke:#000000;fill:transparent;stroke-linejoin:bevel;" />
   <rect x="2587" y="34" width="6" height="6" style="fill:#ffffff;stroke-width:1;stroke:#000000;" />
-  <path d="M 2590,20 2590,40" style="stroke-width:1;stroke:#000000;marker-end:url(#Arrow1Lend);" />
+  <path d="M 2590,20 2590,40 2585,35 2590,40 2595,35 2590,40" style="stroke-width:1;stroke:#000000;fill:transparent;stroke-linejoin:bevel;" />
   <rect x="2907" y="34" width="6" height="6" style="fill:#ffffff;stroke-width:1;stroke:#000000;" />
-  <path d="M 2910,20 2910,40" style="stroke-width:1;stroke:#000000;marker-end:url(#Arrow1Lend);" />
+  <path d="M 2910,20 2910,40 2905,35 2910,40 2915,35 2910,40" style="stroke-width:1;stroke:#000000;fill:transparent;stroke-linejoin:bevel;" />
   <rect x="3227" y="34" width="6" height="6" style="fill:#ffffff;stroke-width:1;stroke:#000000;" />
-  <path d="M 3230,20 3230,40" style="stroke-width:1;stroke:#000000;marker-end:url(#Arrow1Lend);" />
+  <path d="M 3230,20 3230,40 3225,35 3230,40 3235,35 3230,40" style="stroke-width:1;stroke:#000000;fill:transparent;stroke-linejoin:bevel;" />
   <rect x="3547" y="34" width="6" height="6" style="fill:#ffffff;stroke-width:1;stroke:#000000;" />
-  <path d="M 3550,20 3550,40" style="stroke-width:1;stroke:#000000;marker-end:url(#Arrow1Lend);" />
+  <path d="M 3550,20 3550,40 3545,35 3550,40 3555,35 3550,40" style="stroke-width:1;stroke:#000000;fill:transparent;stroke-linejoin:bevel;" />
   <rect x="3867" y="34" width="6" height="6" style="fill:#ffffff;stroke-width:1;stroke:#000000;" />
-  <path d="M 3870,20 3870,40" style="stroke-width:1;stroke:#000000;marker-end:url(#Arrow1Lend);" />
+  <path d="M 3870,20 3870,40 3865,35 3870,40 3875,35 3870,40" style="stroke-width:1;stroke:#000000;fill:transparent;stroke-linejoin:bevel;" />
   <rect x="4187" y="34" width="6" height="6" style="fill:#ffffff;stroke-width:1;stroke:#000000;" />
-  <path d="M 4190,20 4190,40" style="stroke-width:1;stroke:#000000;marker-end:url(#Arrow1Lend);" />
+  <path d="M 4190,20 4190,40 4185,35 4190,40 4195,35 4190,40" style="stroke-width:1;stroke:#000000;fill:transparent;stroke-linejoin:bevel;" />
   <rect x="4507" y="34" width="6" height="6" style="fill:#ffffff;stroke-width:1;stroke:#000000;" />
-  <path d="M 4510,20 4510,40" style="stroke-width:1;stroke:#000000;marker-end:url(#Arrow1Lend);" />
+  <path d="M 4510,20 4510,40 4505,35 4510,40 4515,35 4510,40" style="stroke-width:1;stroke:#000000;fill:transparent;stroke-linejoin:bevel;" />
   <rect x="4827" y="34" width="6" height="6" style="fill:#ffffff;stroke-width:1;stroke:#000000;" />
-  <path d="M 4830,20 4830,40" style="stroke-width:1;stroke:#000000;marker-end:url(#Arrow1Lend);" />
+  <path d="M 4830,20 4830,40 4825,35 4830,40 4835,35 4830,40" style="stroke-width:1;stroke:#000000;fill:transparent;stroke-linejoin:bevel;" />
   <rect x="5147" y="34" width="6" height="6" style="fill:#ffffff;stroke-width:1;stroke:#000000;" />
-  <path d="M 5150,20 5150,40" style="stroke-width:1;stroke:#000000;marker-end:url(#Arrow1Lend);" />
+  <path d="M 5150,20 5150,40 5145,35 5150,40 5155,35 5150,40" style="stroke-width:1;stroke:#000000;fill:transparent;stroke-linejoin:bevel;" />
   <rect x="5467" y="34" width="6" height="6" style="fill:#ffffff;stroke-width:1;stroke:#000000;" />
-  <path d="M 110,40 110,60" style="stroke-width:1;stroke:#000000;marker-end:url(#Arrow1Lend);" />
+  <path d="M 110,40 110,60 105,55 110,60 115,55 110,60" style="stroke-width:1;stroke:#000000;fill:transparent;stroke-linejoin:bevel;" />
   <rect x="407" y="54" width="6" height="6" style="fill:#ffffff;stroke-width:1;stroke:#000000;" />
-  <path d="M 410,40 410,60" style="stroke-width:1;stroke:#000000;marker-end:url(#Arrow1Lend);" />
+  <path d="M 410,40 410,60 405,55 410,60 415,55 410,60" style="stroke-width:1;stroke:#000000;fill:transparent;stroke-linejoin:bevel;" />
   <rect x="707" y="54" width="6" height="6" style="fill:#ffffff;stroke-width:1;stroke:#000000;" />
-  <path d="M 710,40 710,60" style="stroke-width:1;stroke:#000000;marker-end:url(#Arrow1Lend);" />
+  <path d="M 710,40 710,60 705,55 710,60 715,55 710,60" style="stroke-width:1;stroke:#000000;fill:transparent;stroke-linejoin:bevel;" />
   <rect x="1007" y="54" width="6" height="6" style="fill:#ffffff;stroke-width:1;stroke:#000000;" />
-  <path d="M 1010,40 1010,60" style="stroke-width:1;stroke:#000000;marker-end:url(#Arrow1Lend);" />
+  <path d="M 1010,40 1010,60 1005,55 1010,60 1015,55 1010,60" style="stroke-width:1;stroke:#000000;fill:transparent;stroke-linejoin:bevel;" />
   <rect x="1307" y="54" width="6" height="6" style="fill:#ffffff;stroke-width:1;stroke:#000000;" />
-  <path d="M 1310,40 1310,60" style="stroke-width:1;stroke:#000000;marker-end:url(#Arrow1Lend);" />
+  <path d="M 1310,40 1310,60 1305,55 1310,60 1315,55 1310,60" style="stroke-width:1;stroke:#000000;fill:transparent;stroke-linejoin:bevel;" />
   <rect x="1607" y="54" width="6" height="6" style="fill:#ffffff;stroke-width:1;stroke:#000000;" />
-  <path d="M 1610,40 1610,60" style="stroke-width:1;stroke:#000000;marker-end:url(#Arrow1Lend);" />
+  <path d="M 1610,40 1610,60 1605,55 1610,60 1615,55 1610,60" style="stroke-width:1;stroke:#000000;fill:transparent;stroke-linejoin:bevel;" />
   <rect x="1907" y="54" width="6" height="6" style="fill:#ffffff;stroke-width:1;stroke:#000000;" />
-  <path d="M 1910,40 1910,60" style="stroke-width:1;stroke:#000000;marker-end:url(#Arrow1Lend);" />
+  <path d="M 1910,40 1910,60 1905,55 1910,60 1915,55 1910,60" style="stroke-width:1;stroke:#000000;fill:transparent;stroke-linejoin:bevel;" />
   <rect x="2207" y="54" width="6" height="6" style="fill:#ffffff;stroke-width:1;stroke:#000000;" />
-  <path d="M 2210,40 2210,60" style="stroke-width:1;stroke:#000000;marker-end:url(#Arrow1Lend);" />
+  <path d="M 2210,40 2210,60 2205,55 2210,60 2215,55 2210,60" style="stroke-width:1;stroke:#000000;fill:transparent;stroke-linejoin:bevel;" />
   <rect x="2507" y="54" width="6" height="6" style="fill:#ffffff;stroke-width:1;stroke:#000000;" />
-  <path d="M 2510,40 2510,60" style="stroke-width:1;stroke:#000000;marker-end:url(#Arrow1Lend);" />
+  <path d="M 2510,40 2510,60 2505,55 2510,60 2515,55 2510,60" style="stroke-width:1;stroke:#000000;fill:transparent;stroke-linejoin:bevel;" />
   <rect x="2807" y="54" width="6" height="6" style="fill:#ffffff;stroke-width:1;stroke:#000000;" />
-  <path d="M 2810,40 2810,60" style="stroke-width:1;stroke:#000000;marker-end:url(#Arrow1Lend);" />
+  <path d="M 2810,40 2810,60 2805,55 2810,60 2815,55 2810,60" style="stroke-width:1;stroke:#000000;fill:transparent;stroke-linejoin:bevel;" />
   <rect x="3107" y="54" width="6" height="6" style="fill:#ffffff;stroke-width:1;stroke:#000000;" />
-  <path d="M 3110,40 3110,60" style="stroke-width:1;stroke:#000000;marker-end:url(#Arrow1Lend);" />
+  <path d="M 3110,40 3110,60 3105,55 3110,60 3115,55 3110,60" style="stroke-width:1;stroke:#000000;fill:transparent;stroke-linejoin:bevel;" />
   <rect x="3407" y="54" width="6" height="6" style="fill:#ffffff;stroke-width:1;stroke:#000000;" />
-  <path d="M 3410,40 3410,60" style="stroke-width:1;stroke:#000000;marker-end:url(#Arrow1Lend);" />
+  <path d="M 3410,40 3410,60 3405,55 3410,60 3415,55 3410,60" style="stroke-width:1;stroke:#000000;fill:transparent;stroke-linejoin:bevel;" />
   <rect x="3707" y="54" width="6" height="6" style="fill:#ffffff;stroke-width:1;stroke:#000000;" />
-  <path d="M 3710,40 3710,60" style="stroke-width:1;stroke:#000000;marker-end:url(#Arrow1Lend);" />
+  <path d="M 3710,40 3710,60 3705,55 3710,60 3715,55 3710,60" style="stroke-width:1;stroke:#000000;fill:transparent;stroke-linejoin:bevel;" />
   <rect x="4007" y="54" width="6" height="6" style="fill:#ffffff;stroke-width:1;stroke:#000000;" />
-  <path d="M 4010,40 4010,60" style="stroke-width:1;stroke:#000000;marker-end:url(#Arrow1Lend);" />
+  <path d="M 4010,40 4010,60 4005,55 4010,60 4015,55 4010,60" style="stroke-width:1;stroke:#000000;fill:transparent;stroke-linejoin:bevel;" />
   <rect x="4307" y="54" width="6" height="6" style="fill:#ffffff;stroke-width:1;stroke:#000000;" />
-  <path d="M 4310,40 4310,60" style="stroke-width:1;stroke:#000000;marker-end:url(#Arrow1Lend);" />
+  <path d="M 4310,40 4310,60 4305,55 4310,60 4315,55 4310,60" style="stroke-width:1;stroke:#000000;fill:transparent;stroke-linejoin:bevel;" />
   <rect x="4607" y="54" width="6" height="6" style="fill:#ffffff;stroke-width:1;stroke:#000000;" />
-  <path d="M 4610,40 4610,60" style="stroke-width:1;stroke:#000000;marker-end:url(#Arrow1Lend);" />
+  <path d="M 4610,40 4610,60 4605,55 4610,60 4615,55 4610,60" style="stroke-width:1;stroke:#000000;fill:transparent;stroke-linejoin:bevel;" />
   <rect x="4907" y="54" width="6" height="6" style="fill:#ffffff;stroke-width:1;stroke:#000000;" />
-  <path d="M 4910,40 4910,60" style="stroke-width:1;stroke:#000000;marker-end:url(#Arrow1Lend);" />
+  <path d="M 4910,40 4910,60 4905,55 4910,60 4915,55 4910,60" style="stroke-width:1;stroke:#000000;fill:transparent;stroke-linejoin:bevel;" />
   <rect x="5207" y="54" width="6" height="6" style="fill:#ffffff;stroke-width:1;stroke:#000000;" />
-  <path d="M 5210,40 5210,60" style="stroke-width:1;stroke:#000000;marker-end:url(#Arrow1Lend);" />
+  <path d="M 5210,40 5210,60 5205,55 5210,60 5215,55 5210,60" style="stroke-width:1;stroke:#000000;fill:transparent;stroke-linejoin:bevel;" />
   <rect x="5507" y="54" width="6" height="6" style="fill:#ffffff;stroke-width:1;stroke:#000000;" />
  </g>
 </svg>

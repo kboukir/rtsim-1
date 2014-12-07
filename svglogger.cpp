@@ -40,9 +40,6 @@ SvgLogger::~SvgLogger()
    <stop style=\"stop-color:#BFFFBF;stop-opacity:1;\" offset=\"0\" />\n\
    <stop style=\"stop-color:#80FF80;stop-opacity:1;\" offset=\"1\" />\n\
   </linearGradient>\n\
-  <filter id=\"blur\">\n\
-   <feGaussianBlur stdDeviation=\"2.85\" />\n\
-  </filter>\n\
  </defs>\n\
 ";
     svg << " <g>\n";
@@ -93,7 +90,7 @@ SvgLogger::~SvgLogger()
                     svg,
                     i,
                     rectangle,
-                    "color:#000000;fill:#000000;opacity:0.3;filter:url(#blur);",
+                    "color:#000000;fill:#000000;opacity:0.3",
                     2,
                     2
                 );
@@ -138,7 +135,14 @@ SvgLogger::~SvgLogger()
             unsigned int x2 = x + timeToX(t.deadline);
             unsigned int y = i * 20;
 
-            svg << "  <path d=\"M " << x << "," << y << " " << x << "," << (y + 20) << "\" style=\"stroke-width:1;stroke:#000000;marker-end:url(#Arrow1Lend);\" />\n";
+            svg << "  <path d=\"M "
+                << x << "," << y << " "
+                << x << "," << (y + 20) << " "
+                << (x - 5) << "," << (y + 15) << " "
+                << x << "," << (y + 20) << " "
+                << (x + 5) << "," << (y + 15) << " "
+                << x << "," << (y + 20)
+                << "\" style=\"stroke-width:1;stroke:#000000;fill:transparent;stroke-linejoin:bevel;\" />\n";
             svg << "  <rect x=\"" << (x2 - 3) << "\" y=\"" << (y + 14) << "\" width=\"6\" height=\"6\" style=\"fill:#ffffff;stroke-width:1;stroke:#000000;\" />\n";
         }
     }
