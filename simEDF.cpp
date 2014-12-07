@@ -3,6 +3,7 @@
 #include "rmscheduler.h"
 #include "dmscheduler.h"
 #include "edfscheduler.h"
+#include "fixedscheduler.h"
 
 #include <string>
 #include <iostream>
@@ -98,6 +99,8 @@ int main(int argc, char **argv)
         sched = new DMScheduler(filename, switch_percent_time);
     } else if (scheduler == "EDF") {
         sched = new EDFScheduler(filename, switch_percent_time);
+    } else if (scheduler == "fixed") {
+        sched = new FixedScheduler(filename, switch_percent_time);
     } else {
         std::cerr << "Unknown scheduler name: " << scheduler << std::endl;
         return 1;
