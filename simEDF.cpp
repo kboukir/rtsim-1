@@ -123,6 +123,7 @@ int main(int argc, char **argv)
         simulation_steps = sched->idealSimulationTime();
     }
 
+    std::cout << "Predicted simulation time: " << simulation_steps << " time steps" << std::endl;
     sched->schedule(simulation_steps, logger);
 
     // Print statistics

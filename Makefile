@@ -4,7 +4,7 @@ CFLAGS=-g -Wall -std=c++0x
 CXXFLAGS=$(CFLAGS)
 
 # Objects for all the executables
-global_OBJECTS = abstractscheduler.o rmscheduler.o dmscheduler.o edfscheduler.o llfscheduler.o fixedscheduler.o consolelogger.o svglogger.o taskfilegenerator.o
+global_OBJECTS = abstractscheduler.o rmscheduler.o dmscheduler.o edfscheduler.o llfscheduler.o fixedscheduler.o consolelogger.o svglogger.o taskfilegenerator.o graph2d.o
 
 all: simEDF taskGenerator EDF_study
 
