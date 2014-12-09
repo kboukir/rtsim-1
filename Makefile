@@ -6,7 +6,7 @@ CXXFLAGS=$(CFLAGS)
 # Objects for all the executables
 global_OBJECTS = abstractscheduler.o rmscheduler.o dmscheduler.o edfscheduler.o llfscheduler.o fixedscheduler.o consolelogger.o svglogger.o taskfilegenerator.o
 
-all: simEDF taskGenerator
+all: simEDF taskGenerator EDF_study
 
 clean:
 	rm -f *.o simEDF taskGenerator
@@ -22,6 +22,12 @@ taskGenerator_OBJECTS = taskGenerator.o $(global_OBJECTS)
 
 taskGenerator: $(taskGenerator_OBJECTS)
 	$(CXX) -o taskGenerator $(taskGenerator_OBJECTS)
+
+#EDF_study
+EDF_study_OBJECTS = EDF_study.o $(global_OBJECTS)
+
+EDF_study : $(EDF_study_OBJECTS)
+	$(CXX) -o EDF_study $(EDF_study_OBJECTS)
 
 %.o: %.cpp
 	$(CXX) -c -o $*.o $(CXXFLAGS) $*.cpp
