@@ -171,13 +171,22 @@ void AbstractScheduler::schedule(unsigned int time_duration, AbstractLogger *log
         int new_task = schedule();
         unsigned int switching_time = 0;
 
-        if (new_task != _last_task_scheduled && _switch_percent_time != 0 && _last_task_scheduled != -1 && new_task != -1) {
-            // Task switch, so some time is lost in the context switch
-            switching_time = (
-                task(_last_task_scheduled).execution_time + task(new_task).execution_time
-            ) * _switch_percent_time / 100;
+        if (new_task != _last_task_scheduled && _switch_percent_time != 0 && new_task != -1) {
+            if (_last_task_scheduled != -1) {
+                // Task switch with preemption of another job, so some time is lost to store 
+                // previous context and load the new one
+                switching_time = (
+                    task(_last_task_scheduled).execution_time + task(new_task).execution_time
+                ) * _switch_percent_time / 100;
 
-            _number_preemptions++;
+                _number_preemptions++;
+            }
+            else {
+                // Task switch without preemption, time is lost only to load the new context
+                switching_time = (
+                    task(new_task).execution_time
+                ) * _switch_percent_time / 100;
+            }
         }
 
         // Notify the logger of the possible switching time
