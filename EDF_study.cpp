@@ -8,6 +8,15 @@
 #include <list>
 
 
+static void timePercentage(const char *title, unsigned int time, unsigned int total)
+{
+    std::cout << title  << (time * 100 / total) << " %" << std::endl;
+}
+
+// Compute the cartesian product of the three lists, execute EDF scheduler 
+// for each tuple that belongs to the product and procude 6 graphs in gnuplot format 
+// (switching_time X idle_time, switching_time X schedulability, number_of_tasks X idle_time, 
+// number_of_tasks X schedulability, use_percentage X idle_time and use_percentage X schedulability).
 void test(std::list<unsigned int> switch_percent_times, std::list<unsigned int> number_of_tasks, std::list<unsigned int> utilisations) {
     std::list<Graph2d::Point> y_idle_x_switching_time;
     std::list<Graph2d::Point> y_schedulable_x_switching_time;
@@ -15,6 +24,9 @@ void test(std::list<unsigned int> switch_percent_times, std::list<unsigned int> 
     std::list<Graph2d::Point> y_schedulable_x_tasks;
     std::list<Graph2d::Point> y_idle_x_use;
     std::list<Graph2d::Point> y_schedulable_x_use;
+    
+    unsigned int simulation_index = 1;
+    
     for(std::list<unsigned int>::iterator it_task = number_of_tasks.begin(); it_task!=number_of_tasks.end(); ++it_task)
     {
         for(std::list<unsigned int>::iterator it_u = utilisations.begin(); it_u!=utilisations.end(); ++it_u)
@@ -53,6 +65,22 @@ void test(std::list<unsigned int> switch_percent_times, std::list<unsigned int> 
                 
                 pt.y = scheduler.isSystemSchedulable() ? 1 : 0;
                 y_schedulable_x_use.push_back(pt);
+                
+                std::cout << "======Statistics of simulation " << simulation_index << "======" << std::endl
+                    << "-> Simulation inputs" << std::endl
+                    << "Switching time: " << *it_percent << "%" << std::endl 
+                    << "Number of tasks: " << *it_task << std::endl 
+                    << "System load: " << *it_u << "%" << std::endl
+                    << "-> Simulation outputs" << std::endl
+                    << "System schedulable: " << (scheduler.isSystemSchedulable() ? "yes" : "no") << std::endl
+                    << "Simulation time: " << scheduler.currentTime() << " time steps" << std::endl;
+                timePercentage("Active time: ", scheduler.activeTime(), scheduler.currentTime());
+                timePercentage("Switching time: ", scheduler.switchingTime(), scheduler.currentTime());
+                timePercentage("Idle time: ", scheduler.currentTime() - scheduler.activeTime() - scheduler.switchingTime(), scheduler.currentTime());
+                std::cout << "Context switches: " << scheduler.numberPreemptions() << std::endl
+                    << std::endl;
+                
+                ++simulation_index;
             }
         }
     }
