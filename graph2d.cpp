@@ -2,13 +2,13 @@
 #include <iostream>
 #include <fstream>
 
-Graph2d::Graph2d(std::list< Graph2d::Point >& points, std::string& x_name, std::string& y_name) 
+Graph2d::Graph2d(std::list< Graph2d::Point >& points, std::string x_name, std::string y_name) 
 : _points(points), _x_name(x_name), _y_name(y_name)
 {
     sortPointsByXValue();
 }
 
-void Graph2d::writeInFile(std::string filename)
+void Graph2d::writeInSvgFile(std::string filename)
 {
     std::ofstream svg(filename.c_str());
     
@@ -106,6 +106,35 @@ void Graph2d::writeInFile(std::string filename)
     svg.close();
 }
 
+
+void Graph2d::writeInGnuplotFile(std::string filename) {
+    std::ofstream gnuplot_script(filename.c_str());
+    std::string gnuplot_data_filename(filename + ".dat");
+    std::ofstream gnuplot_data(gnuplot_data_filename.c_str());
+    
+    gnuplot_data << "#Data for " << filename.c_str() << "\n";
+    for(std::list<Point>::iterator it=_points.begin(); it!=_points.end(); ++it) {
+        gnuplot_data << it->x << " " << it->y << "\n";
+    }
+    
+    gnuplot_script << "set autoscale\n"
+        << "set terminal pdf\n"
+        << "set output \"" << filename + ".pdf" << "\"\n"
+        << "unset log\n"
+        << "unset label\n"
+        << "set xtic auto\n"
+        << "set ytic auto\n"
+        << "set xlabel \"" << _x_name << "\"\n"
+        << "set ylabel \"" << _y_name << "\"\n"
+        << "plot \"" << gnuplot_data_filename << "\" notitle with linespoints\n";
+        
+        
+    gnuplot_data.flush();
+    gnuplot_data.close();
+    gnuplot_script.flush();
+    gnuplot_script.close();
+    
+}
 
 
 void Graph2d::sortPointsByXValue()

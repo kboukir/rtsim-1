@@ -11,8 +11,9 @@ class Graph2d
             unsigned int x;
             unsigned int y;
         };
-        Graph2d(std::list<Point> &points, std::string &x_name, std::string &y_name);
-        void writeInFile(std::string filename);
+        Graph2d(std::list<Point> &points, std::string x_name, std::string y_name);
+        void writeInSvgFile(std::string filename);
+        void writeInGnuplotFile(std::string filename);
         
     private:
         std::list<Point> _points;
