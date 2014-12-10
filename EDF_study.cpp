@@ -78,6 +78,7 @@ void test(std::list<unsigned int> switch_percent_times, std::list<unsigned int> 
                 timePercentage("Switching time: ", scheduler.switchingTime(), scheduler.currentTime());
                 timePercentage("Idle time: ", scheduler.currentTime() - scheduler.activeTime() - scheduler.switchingTime(), scheduler.currentTime());
                 std::cout << "Context switches: " << scheduler.numberPreemptions() << std::endl
+                    << "============" << std::endl
                     << std::endl;
                 
                 ++simulation_index;
@@ -104,21 +105,72 @@ void test(std::list<unsigned int> switch_percent_times, std::list<unsigned int> 
     graph6.writeInGnuplotFile("y_schedulable_x_use.gnuplot");
 }
 
+static void usage() {
+    std::cout << "Usage: EDF_study [--help] [--usage <list of usages in %>] [--task-number <list of task number>] [--switching-time <list of switching time percentages>]" << std::endl;
+}
+
 
 int main(int argc, char **argv) {
     
+    
     std::list<unsigned int> switch_percent_times;
-    switch_percent_times.push_back(5);
-    
     std::list<unsigned int> number_of_tasks;
-    number_of_tasks.push_back(2);
-    number_of_tasks.push_back(3);
-    
     std::list<unsigned int> utilisations;
-    utilisations.push_back(40);
-    utilisations.push_back(70);
-    utilisations.push_back(90);
-    utilisations.push_back(110);
+
+    
+    enum {
+        None,
+        UsagePercent,
+        NumberTasks,
+        SwitchingTime,
+        Help
+    } state = None;
+
+    for (int i=1; i<argc; ++i) {
+        std::string arg(argv[i]);
+
+        if (arg == "--usage") {
+            state = UsagePercent;
+            continue;
+        } else if (arg == "--task-number") {
+            state = NumberTasks;
+            continue;
+        } else if (arg == "--switching-time") {
+            state = SwitchingTime;
+            continue;
+        } else if (arg == "--help") {
+            state = Help;
+        }
+
+        switch (state) {
+            case UsagePercent:
+                utilisations.push_back(atoi(arg.c_str()));
+                break;
+            case NumberTasks:
+                number_of_tasks.push_back(atoi(arg.c_str()));
+                break;
+            case SwitchingTime:
+                switch_percent_times.push_back(atoi(arg.c_str()));
+                break;
+            case Help:
+                usage();
+                state = None;
+                break;
+            case None:
+                break;
+        }
+    }
+    
+    // Default values
+    if (switch_percent_times.empty()) {
+        switch_percent_times.push_back(5);
+    }
+    if (number_of_tasks.empty()) {
+        number_of_tasks.push_back(2);
+    }
+    if (utilisations.empty()) {
+        utilisations.push_back(70);
+    }
 
     
     test(switch_percent_times, number_of_tasks, utilisations);
