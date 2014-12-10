@@ -2,6 +2,7 @@
 #include "taskfilegenerator.h"
 #include "abstractscheduler.h"
 #include "edfscheduler.h"
+#include "dummylogger.h"
 #include <string>
 #include <iostream>
 
@@ -11,16 +12,15 @@ void test(std::list<int> switch_percent_times, std::list<int> number_of_tasks, s
     {
         for(std::list<int>::iterator it_u = utilisations.begin(); it_u!=utilisations.end(); ++it_u)
         {
-			TaskFileGenerator taskFileGenerator(*it_task, *it_u);
-			int number_of_tasks = taskFileGenerator.getNumberTasks();
-			AbstractScheduler::Task *tasks = taskFileGenerator.getTasks();
-			
-			
-			
+            TaskFileGenerator taskFileGenerator(*it_task, *it_u);
+            int number_of_tasks = taskFileGenerator.getNumberTasks();
+            AbstractScheduler::Task *tasks = taskFileGenerator.getTasks();
+
             for(std::list<int>::iterator it_percent = switch_percent_times.begin(); it_percent!=switch_percent_times.end(); ++it_percent)
             {
                 EDFScheduler scheduler = EDFScheduler(std::vector<AbstractScheduler::Task>(tasks, tasks+sizeof(AbstractScheduler::Task)*number_of_tasks), *it_percent);
-                scheduler.schedule();
+                AbstractLogger *logger = new DummyLogger;
+                scheduler.schedule(scheduler.idealSimulationTime(), logger);
             }
         }
     }
