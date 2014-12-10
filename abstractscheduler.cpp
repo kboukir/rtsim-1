@@ -65,6 +65,15 @@ AbstractScheduler::AbstractScheduler(std::vector<Task> tasks, unsigned int switc
   _switch_percent_time(switch_percent_time),
   _last_task_scheduled(-1)
 {
+    for (unsigned int i=0; i<_tasks.size(); ++i) {
+        _tasks[i].index = i;
+        _tasks[i].consumed_cycles = 0;
+        _tasks[i].time_to_deadline = _tasks[i].deadline + _tasks[i].offset;
+        _tasks[i].time_to_release = _tasks[i].offset;
+    }
+    
+    nextTick(nullptr);
+    --_current_time;
 }
 
 AbstractScheduler::~AbstractScheduler()
