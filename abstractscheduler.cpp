@@ -59,6 +59,14 @@ AbstractScheduler::AbstractScheduler(const std::string &filename, unsigned int s
     --_current_time;
 }
 
+AbstractScheduler::AbstractScheduler(std::vector<Task> tasks, unsigned int switch_percent_time)
+: _current_time(0),
+  _switch_percent_time(switch_percent_time),
+  _last_task_scheduled(-1),
+  _tasks(tasks)
+{
+}
+
 AbstractScheduler::~AbstractScheduler()
 {
 }

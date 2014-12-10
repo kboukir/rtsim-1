@@ -27,6 +27,7 @@ class AbstractScheduler
 
     public:
         AbstractScheduler(const std::string &filename, unsigned int switch_percent_time);
+        AbstractScheduler(std::vector<Task> tasks, unsigned int switch_percent_time);
         virtual ~AbstractScheduler();
 
         void schedule(unsigned int time_duration, AbstractLogger *logger);  /*!< @brief Runs N iterations of the scheduling algorithm */
