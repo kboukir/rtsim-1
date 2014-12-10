@@ -58,7 +58,8 @@ int main(int argc, char **argv)
     }
 
     // Generate the task file
-    generateTaskFile(filename, number_tasks, target_use_percent);
+    TaskFileGenerator taskfilegenerator(number_tasks, target_use_percent);
+    taskfilegenerator.generateTaskFile(filename);
 
     return 0;
 }
