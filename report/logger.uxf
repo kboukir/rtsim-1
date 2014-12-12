@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="13.1">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>270</x>
+      <y>80</y>
+      <w>130</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>/AbstractLogger/
+--
+--
++ notifyTask
++ notifySwitch
++ DeadlineMiss
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>130</x>
+      <y>210</y>
+      <w>120</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>ConsoleLogger
+--
+Prints results
+in the console
+using colors</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>270</x>
+      <y>210</y>
+      <w>120</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>SVGLogger
+--
+Generates SVG
+files</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>410</x>
+      <y>210</y>
+      <w>120</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>DummyLogger
+--
+Don't log
+anything, used
+for stats</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>320</x>
+      <y>150</y>
+      <w>170</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=-
+layer=0</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;30.0;150.0;30.0;150.0;60.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>180</x>
+      <y>150</y>
+      <w>170</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>150.0;10.0;150.0;30.0;10.0;30.0;10.0;60.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>320</x>
+      <y>150</y>
+      <w>30</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=-
+layer=0</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;60.0</additional_attributes>
+  </element>
+</diagram>

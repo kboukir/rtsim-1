@@ -12,7 +12,7 @@ _tasks(new AbstractScheduler::Task[number_tasks])
         AbstractScheduler::Task &task = _tasks[i];
 
         task.offset = random_number(0, 100);
-        task.period = random_number(10, 200);
+        task.period = random_number(10, 100);
     }
 
     // The target total utilization must be split across the tasks. Considering
@@ -37,7 +37,7 @@ _tasks(new AbstractScheduler::Task[number_tasks])
         AbstractScheduler::Task &task = _tasks[i];
         int use_percent = (uses[i+1] - uses[i]) + delta_use_percent;
 
-        task.execution_time = task.period * use_percent / 100;
+        task.execution_time = std::max(1U, task.period * use_percent / 100);
         task.deadline = random_number(task.execution_time, task.period);
 
         int real_use_percent = task.execution_time * 100 / task.period;
