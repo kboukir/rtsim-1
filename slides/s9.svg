@@ -51,8 +51,8 @@
   <rect x="232" y="2" width="60" height="20" style="color:#000000;fill:#000000;opacity:0.3" />
   <rect x="230" y="0" width="60" height="20" style="fill:url(#grad1);stroke:#000000;stroke-width:1;" />
   <path d="M 30,0 30,20 25,15 30,20 35,15 30,20" style="stroke-width:1;stroke:#000000;fill:transparent;stroke-linejoin:bevel;" />
-  <rect x="127" y="14" width="6" height="6" style="fill:#ffffff;stroke-width:1;stroke:#000000;" />
+  <circle cx="130" cy="20" r="4" style="fill:#ffffff;stroke-width:1;stroke:#000000;" />
   <path d="M 230,0 230,20 225,15 230,20 235,15 230,20" style="stroke-width:1;stroke:#000000;fill:transparent;stroke-linejoin:bevel;" />
-  <rect x="327" y="14" width="6" height="6" style="fill:#ffffff;stroke-width:1;stroke:#000000;" />
+  <circle cx="330" cy="20" r="4" style="fill:#ffffff;stroke-width:1;stroke:#000000;" />
  </g>
 </svg>

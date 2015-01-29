@@ -101,26 +101,26 @@
   <rect x="452" y="42" width="40" height="20" style="color:#000000;fill:#000000;opacity:0.3" />
   <rect x="450" y="40" width="40" height="20" style="fill:url(#grad3);stroke:#000000;stroke-width:1;" />
   <path d="M 30,0 30,20 25,15 30,20 35,15 30,20" style="stroke-width:1;stroke:#000000;fill:transparent;stroke-linejoin:bevel;" />
-  <rect x="187" y="14" width="6" height="6" style="fill:#ffffff;stroke-width:1;stroke:#000000;" />
+  <circle cx="190" cy="20" r="4" style="fill:#ffffff;stroke-width:1;stroke:#000000;" />
   <path d="M 190,0 190,20 185,15 190,20 195,15 190,20" style="stroke-width:1;stroke:#000000;fill:transparent;stroke-linejoin:bevel;" />
-  <rect x="347" y="14" width="6" height="6" style="fill:#ffffff;stroke-width:1;stroke:#000000;" />
+  <circle cx="350" cy="20" r="4" style="fill:#ffffff;stroke-width:1;stroke:#000000;" />
   <path d="M 350,0 350,20 345,15 350,20 355,15 350,20" style="stroke-width:1;stroke:#000000;fill:transparent;stroke-linejoin:bevel;" />
-  <rect x="507" y="14" width="6" height="6" style="fill:#ffffff;stroke-width:1;stroke:#000000;" />
+  <circle cx="510" cy="20" r="4" style="fill:#ffffff;stroke-width:1;stroke:#000000;" />
   <path d="M 510,0 510,20 505,15 510,20 515,15 510,20" style="stroke-width:1;stroke:#000000;fill:transparent;stroke-linejoin:bevel;" />
-  <rect x="667" y="14" width="6" height="6" style="fill:#ffffff;stroke-width:1;stroke:#000000;" />
+  <circle cx="670" cy="20" r="4" style="fill:#ffffff;stroke-width:1;stroke:#000000;" />
   <path d="M 670,0 670,20 665,15 670,20 675,15 670,20" style="stroke-width:1;stroke:#000000;fill:transparent;stroke-linejoin:bevel;" />
-  <rect x="827" y="14" width="6" height="6" style="fill:#ffffff;stroke-width:1;stroke:#000000;" />
+  <circle cx="830" cy="20" r="4" style="fill:#ffffff;stroke-width:1;stroke:#000000;" />
   <path d="M 30,20 30,40 25,35 30,40 35,35 30,40" style="stroke-width:1;stroke:#000000;fill:transparent;stroke-linejoin:bevel;" />
-  <rect x="267" y="34" width="6" height="6" style="fill:#ffffff;stroke-width:1;stroke:#000000;" />
+  <circle cx="270" cy="40" r="4" style="fill:#ffffff;stroke-width:1;stroke:#000000;" />
   <path d="M 270,20 270,40 265,35 270,40 275,35 270,40" style="stroke-width:1;stroke:#000000;fill:transparent;stroke-linejoin:bevel;" />
-  <rect x="507" y="34" width="6" height="6" style="fill:#ffffff;stroke-width:1;stroke:#000000;" />
+  <circle cx="510" cy="40" r="4" style="fill:#ffffff;stroke-width:1;stroke:#000000;" />
   <path d="M 510,20 510,40 505,35 510,40 515,35 510,40" style="stroke-width:1;stroke:#000000;fill:transparent;stroke-linejoin:bevel;" />
-  <rect x="747" y="34" width="6" height="6" style="fill:#ffffff;stroke-width:1;stroke:#000000;" />
+  <circle cx="750" cy="40" r="4" style="fill:#ffffff;stroke-width:1;stroke:#000000;" />
   <path d="M 230,40 230,60 225,55 230,60 235,55 230,60" style="stroke-width:1;stroke:#000000;fill:transparent;stroke-linejoin:bevel;" />
-  <rect x="467" y="54" width="6" height="6" style="fill:#ffffff;stroke-width:1;stroke:#000000;" />
+  <circle cx="470" cy="60" r="4" style="fill:#ffffff;stroke-width:1;stroke:#000000;" />
   <path d="M 470,40 470,60 465,55 470,60 475,55 470,60" style="stroke-width:1;stroke:#000000;fill:transparent;stroke-linejoin:bevel;" />
-  <rect x="707" y="54" width="6" height="6" style="fill:#ffffff;stroke-width:1;stroke:#000000;" />
+  <circle cx="710" cy="60" r="4" style="fill:#ffffff;stroke-width:1;stroke:#000000;" />
   <path d="M 710,40 710,60 705,55 710,60 715,55 710,60" style="stroke-width:1;stroke:#000000;fill:transparent;stroke-linejoin:bevel;" />
-  <rect x="947" y="54" width="6" height="6" style="fill:#ffffff;stroke-width:1;stroke:#000000;" />
+  <circle cx="950" cy="60" r="4" style="fill:#ffffff;stroke-width:1;stroke:#000000;" />
  </g>
 </svg>

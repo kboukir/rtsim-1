@@ -51,16 +51,16 @@
   <rect x="92" y="62" width="20" height="20" style="color:#000000;fill:#000000;opacity:0.3" />
   <rect x="90" y="60" width="20" height="20" style="fill:url(#grad4);stroke:#000000;stroke-width:1;" />
   <path d="M 110,0 110,20 105,15 110,20 115,15 110,20" style="stroke-width:1;stroke:#000000;fill:transparent;stroke-linejoin:bevel;" />
-  <rect x="167" y="14" width="6" height="6" style="fill:#ffffff;stroke-width:1;stroke:#000000;" />
+  <circle cx="170" cy="20" r="4" style="fill:#ffffff;stroke-width:1;stroke:#000000;" />
   <path d="M 50,20 50,40 45,35 50,40 55,35 50,40" style="stroke-width:1;stroke:#000000;fill:transparent;stroke-linejoin:bevel;" />
-  <rect x="147" y="34" width="6" height="6" style="fill:#ffffff;stroke-width:1;stroke:#000000;" />
+  <circle cx="150" cy="40" r="4" style="fill:#ffffff;stroke-width:1;stroke:#000000;" />
   <path d="M 150,20 150,40 145,35 150,40 155,35 150,40" style="stroke-width:1;stroke:#000000;fill:transparent;stroke-linejoin:bevel;" />
-  <rect x="247" y="34" width="6" height="6" style="fill:#ffffff;stroke-width:1;stroke:#000000;" />
+  <circle cx="250" cy="40" r="4" style="fill:#ffffff;stroke-width:1;stroke:#000000;" />
   <path d="M 30,40 30,60 25,55 30,60 35,55 30,60" style="stroke-width:1;stroke:#000000;fill:transparent;stroke-linejoin:bevel;" />
-  <rect x="127" y="54" width="6" height="6" style="fill:#ffffff;stroke-width:1;stroke:#000000;" />
+  <circle cx="130" cy="60" r="4" style="fill:#ffffff;stroke-width:1;stroke:#000000;" />
   <path d="M 130,40 130,60 125,55 130,60 135,55 130,60" style="stroke-width:1;stroke:#000000;fill:transparent;stroke-linejoin:bevel;" />
-  <rect x="227" y="54" width="6" height="6" style="fill:#ffffff;stroke-width:1;stroke:#000000;" />
+  <circle cx="230" cy="60" r="4" style="fill:#ffffff;stroke-width:1;stroke:#000000;" />
   <path d="M 50,60 50,80 45,75 50,80 55,75 50,80" style="stroke-width:1;stroke:#000000;fill:transparent;stroke-linejoin:bevel;" />
-  <rect x="167" y="74" width="6" height="6" style="fill:#ffffff;stroke-width:1;stroke:#000000;" />
+  <circle cx="170" cy="80" r="4" style="fill:#ffffff;stroke-width:1;stroke:#000000;" />
  </g>
 </svg>

@@ -28,7 +28,7 @@
     </coordinates>
     <panel_attributes>RMScheduler
 --
-# hashTaskPriority(a, b)</panel_attributes>
+# hasTaskPriority(a, b)</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -41,7 +41,7 @@
     </coordinates>
     <panel_attributes>DMScheduler
 --
-# hashTaskPriority(a, b)</panel_attributes>
+# hasTaskPriority(a, b)</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -54,7 +54,7 @@
     </coordinates>
     <panel_attributes>EDFScheduler
 --
-# hashTaskPriority(a, b)</panel_attributes>
+# hasTaskPriority(a, b)</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -67,7 +67,7 @@
     </coordinates>
     <panel_attributes>LLFScheduler
 --
-# hashTaskPriority(a, b)</panel_attributes>
+# hasTaskPriority(a, b)</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -80,7 +80,7 @@
     </coordinates>
     <panel_attributes>FixedScheduler
 --
-# hashTaskPriority(a, b)</panel_attributes>
+# hasTaskPriority(a, b)</panel_attributes>
     <additional_attributes/>
   </element>
   <element>

@@ -143,7 +143,7 @@ SvgLogger::~SvgLogger()
                 << (x + 5) << "," << (y + 15) << " "
                 << x << "," << (y + 20)
                 << "\" style=\"stroke-width:1;stroke:#000000;fill:transparent;stroke-linejoin:bevel;\" />\n";
-            svg << "  <rect x=\"" << (x2 - 3) << "\" y=\"" << (y + 14) << "\" width=\"6\" height=\"6\" style=\"fill:#ffffff;stroke-width:1;stroke:#000000;\" />\n";
+            svg << "  <circle cx=\"" << x2 << "\" cy=\"" << (y + 20) << "\" r=\"4\" style=\"fill:#ffffff;stroke-width:1;stroke:#000000;\" />\n";
         }
     }
 
